@@ -1,0 +1,47 @@
+.filter-list {
+    max-height: 200px;
+    overflow-y: auto;
+    &.employees-list{
+        max-height: 260px;
+    }
+    /* width */
+    &::-webkit-scrollbar {
+        width: 3px;
+
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #E0E0E0;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #587E85;
+        border-radius: 10px;
+    }
+
+   
+    li {
+        padding: 7px 0;
+        label {
+            margin: 0;
+            padding: 0;
+        }
+        .ch-checkbox, .ch-radio{
+            line-height: 1.3;
+            span {
+                font-weight: 500;
+                animation: none;
+                display: block;
+                color: #2F3245;
+                small{
+                    display: block;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: #79869A;
+                }
+            }
+        }
+    }
+}

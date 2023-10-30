@@ -1,0 +1,41 @@
+// VARIABLES FOR FONTS
+$font: "InterUi" !default;
+@mixin font-face($font, $font-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font; //src        : url("#{$font-path}.eot");
+        src: url("#{$font-path}.woff") format("woff"),
+        url("#{$font-path}.woff2") format("woff2");
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+@mixin InterUi {
+    font-family: '$font', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin InterUi {
+    font-family: '$font', arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin InterUi {
+    font-family: '$font', arial, sans-serif;
+    font-weight: 150;
+    font-style: normal;
+}
+
+@mixin InterUi {
+    font-family: '$font', arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin InterUi {
+    font-family: '$font', arial, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}

@@ -1,0 +1,97 @@
+.aod-dc-title {
+    font-size: 15px;
+    color: #5b6b82;
+    
+}
+.aod-dc-head{
+    font-size: 16px;
+color: #587E85;
+font-weight: 600;
+
+}
+
+.aod-dc-value-placeholder {
+    width: 200px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #777;
+}
+
+.aod-dc-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #102c42;
+}
+
+.aod-o-placeholder1 {
+    width: 150px;
+    height: 18px;
+    border-radius: 2px;
+    background-color: #777;
+}
+
+.aod-o-placeholder2 {
+    width: 210px;
+    height: 18px;
+    border-radius: 2px;
+    background-color: #777;
+}
+
+.aod-o-placeholder3 {
+    width: 50px;
+    height: 18px;
+    border-radius: 2px;
+    background-color: #777;
+}
+.trial-date{ 
+.react-custom-calendar{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.083998);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 0px;
+    width: 356px;
+    margin-top: 19px;
+    position: absolute;
+    z-index: 1000;
+    right: 0px;
+}
+.scheduler-calendar{
+    margin-bottom: 30px;
+    .react-calendar__month-view__days button.react-calendar__tile--now abbr{
+        background: #587e85 !important;
+        border-color: #587e85 !important;
+
+    }
+}
+.input-date{
+    font-size: 15px;
+    font-weight: 600;
+    color: #102c42;
+    border: none;
+  text-align: right;
+
+}
+.extend-update{
+  
+width: 116px;
+padding: 13px 28px;
+
+  
+}
+.extend-trial{
+    font-weight: 500;
+font-size: 12px;
+line-height: 9px;
+text-decoration-line: underline;
+color: #587E85;
+background: transparent;
+border: none;
+float: right;
+
+}
+
+}
+.trial-extend-last-field{
+    margin-bottom: 40px;
+}

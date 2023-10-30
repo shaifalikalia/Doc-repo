@@ -1,0 +1,260 @@
+.family-member-page {
+    .family-member-tabs {
+        padding-left: 54px;
+        padding-right: 54px;
+
+        @media screen and (max-width:480px) {
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .family-members-records{
+            max-width: 322px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 40px;
+            width: 100%;
+        }
+    }
+
+    .nav-tabs {
+        margin-bottom: 40px;
+
+        @media screen and (max-width:420px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-title-row {
+        margin-bottom: 30px;
+
+        .family-member-title {
+            @media screen and (max-width:767px) {
+                margin-top: -10px;
+            }
+        }
+
+    }
+
+    .button-mobile {
+        @media screen and (max-width:767px) {
+
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width:420px) {
+            width: 100%;
+
+        }
+
+    }
+}
+
+
+.family-profile-card {
+    padding: 70px 69px 70px 70px !important;
+    margin-top: 30px;
+
+    @media screen and (max-width:767px) {
+        padding: 4px 20px 30px 20px !important;
+    }
+
+    .profile-form-col {
+        border-right: solid 1px rgba(151, 151, 151, 0.4);
+
+        @media screen and (max-width:991px) {
+            border-right: none;
+        }
+
+        .inner-form {
+            width: 60%;
+
+
+            @media screen and (max-width:991px) {
+                width: 100%;
+            }
+            .custom-email-both-error{
+                margin-top: -24px;
+    margin-bottom: 30px;
+            }
+
+
+
+        }
+
+
+
+    }
+
+    .button-mobile {
+        @media screen and (max-width:767px) {
+            width: 100%;
+        }
+
+        &.save-button {
+            margin-bottom: 16px;
+        }
+    }
+
+
+}
+
+// Family Member Card scss
+.family-member-card-main {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .family-member-card-width {
+
+
+        margin-bottom: 20px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(25% - 10px - 10px);
+
+        @media screen and (max-width:991px) {
+            width: calc(33.3% - 10px - 10px);
+        }
+
+        @media screen and (max-width:767px) {
+            width: calc(50% - 10px - 10px);
+        }
+
+        @media screen and (max-width:480px) {
+            width: calc(100% - 10px - 10px);
+            margin-bottom: 10px;
+        }
+
+
+
+
+        .family-member-card {
+            border-radius: 15px;
+            background-color: #F9FCEE;
+            text-align: center;
+            position: relative;
+            min-height: 256px;
+            height: 100%;
+            padding: 20px;
+            .member-img img{
+                border-radius: 100px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .member-status {
+                padding: 4px 10px 5px;
+                border-radius: 3px;
+                font-size: 10px;
+                line-height: 10px;
+                color: #fff;
+
+                &.rejected {
+                    background-color: #EE4F4F;
+                }
+
+                &.pending {
+                    background-color: #66ACCF;
+                }
+
+            }
+
+            .family-member-dropdown {
+                span.ico {
+                    cursor: pointer;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 32px;
+                    background-color: transparent;
+                    display: inline-block;
+                    margin-right: -14px;
+
+                    &:hover {
+                        background-color: #e6eced;
+                    }
+                }
+
+                .dropdown-menu {
+                    min-width: 171px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+                    background-color: #fff;
+                    border: 0;
+
+                    height: auto;
+                    padding: 10px 20px;
+
+                    &.remove-list {
+                        min-width: 221px;
+                        left: 14px !important;
+                    }
+
+                    .dropdown-item {
+                        padding: 10px 0;
+                        background-color: transparent;
+                        color: #111b45;
+                        font-size: 13px;
+                        border-bottom: 1px solid #f2f3ef;
+                        white-space: break-spaces;
+                        line-height: 19px;
+
+
+
+                        &:last-child {
+                            border: 0;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            outline: none;
+                            background-color: transparent;
+                            box-shadow: none;
+                            color: #a9cf3d;
+                            ;
+                        }
+                    }
+                }
+            }
+
+            .member-name {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #587E85;
+                padding-top: 20px;
+                min-width:150px;
+                width: 150px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+            .member-profile {
+                font-size: 12px;
+                line-height: 12px;
+                letter-spacing: -0.24px;
+                color: #2A4642;
+                font-weight: 500;
+            }
+
+            .member-card-error {
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 15px;
+                padding-top: 10px;
+
+                color: #EE4F4F;
+
+                span {
+                    img {
+                        width: 37px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/*Modal CSS*/
+
+.custom-modal-dialog{
+  max-width: 660px;
+  button{
+      min-width: 220px;
+      @media screen and (max-width:767px) {
+          min-width: auto;
+          margin-bottom: 20px;
+      }
+  }
+  .calender-modal {
+      ol {
+          list-style: numeric;
+          padding-left: 40px;
+          margin-bottom: 16px;
+      }
+  }
+}

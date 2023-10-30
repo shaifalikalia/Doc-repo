@@ -1,0 +1,51 @@
+.add-contract-modal {
+    &.modal-dialog {
+        max-width: 670px;
+        .modal-content {
+            padding: 30px;
+            @media screen and (max-width:767px) {
+               padding: 20px 15px 30px;
+               
+             }
+        }
+    }
+    .new-contract-field{
+        position: relative;
+        border-bottom: 1px solid rgba(151, 151, 151, 0.4);
+
+        .contract-name-wrapper{
+            border:none;
+            @media screen and (max-width:420px) {
+                width:90%;
+                // width:max-content
+            }
+        }
+        .trash-icon{
+            position: absolute;
+            right: 0;
+            bottom: 15px;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+    .btn-box {
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width:767px) {
+            flex-direction: column;
+            p{
+                margin: 18px 0;
+            }
+        }
+        .button {
+            min-width: 240px;
+            @media screen and (max-width:767px) {
+               width: 100%;
+              
+            }
+        }
+    }
+    .contract-input {
+        display: none;
+    }
+}

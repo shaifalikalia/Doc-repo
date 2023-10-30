@@ -1,0 +1,87 @@
+.page-subheading{
+    margin-top: -15px;
+}
+.add-btn-row{
+    text-align: right;
+    position: relative;
+    @media screen and (max-width:767px) {
+       text-align: left;
+       margin-top: 20px;
+       margin-top: 14px;
+    }
+    button{
+        position: absolute;
+        right: 0;
+        top: -70px;
+        @media screen and (max-width:767px) {
+            position: static;
+            width: 100%;
+        }
+    }
+}
+.card-container{
+    padding: 30px !important;
+    cursor: default !important;
+    @media screen and (max-width:767px) {
+      padding:20px !important;
+    }
+    .added-col{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        @media screen and (max-width:576px) {
+           margin-top: 25px;
+           height: auto;
+        }
+    }
+    .staff-inner{
+        position: relative;
+        @media screen and (max-width:767px) {
+            padding-right: 90px;
+        }
+        .btn-box{
+            position: absolute;
+            right: 0;
+            top: 0;
+            .btn-link{
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 30px;
+            }
+        }
+    }
+  
+    
+    .status-box{
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 4px 6px;
+        margin-bottom: 20px;
+        background-color: #dae1e9;
+        color: #8495aa;
+        &.draft{
+            background-color: #dae1e9;
+            color: #8495aa;
+        }
+        &.sent{
+            background-color: #a9cf3d;
+            color: #fff;
+        }
+        &.accepted{
+            background-color: #66accf;
+            color: #fff;
+        }
+    }
+}
+
+.mobile-align-center{
+    @media screen and (max-width:767px) {
+        ul{
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.event-detail-card{
+    padding: 70px !important;
+    cursor: default !important;
+    @media screen and (max-width:767px) {
+        padding: 20px !important;
+     }
+     .align-items-top{
+         align-items: flex-start;
+         @media screen and (max-width:767px) {
+           >p{
+            width: calc(100% - 80px);
+           }
+           }
+     }
+    .delete-edit-icons{
+        margin-top: 5px;
+        display: flex;
+        img{
+            cursor: pointer;
+            margin-left: 27px;
+            width: 18px;
+            height: auto;
+            @media screen and (max-width:767px) {
+               &:first-child{
+                margin-left: 0;
+               }
+             }
+        }
+        @media screen and (max-width:767px) {
+          width: 70px;
+         }
+    }
+    .white-col-list{
+        li{
+            margin-bottom: 25px;
+            .tag-list{
+                display: flex;
+                span{
+                    color: rgb(47, 50, 68);
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin: 10px  5px 0 0;
+                    padding: 6px 15px 9px;
+                    border-radius: 14px;
+                    background-color: rgb(242, 243, 239);
+                    animation: none;
+                }
+            }
+        }
+    }
+    .invitation-status{
+        margin: 0  0 30px;
+        padding: 20px 30px ;
+        border-radius: 6px;
+        background-color: rgb(249, 252, 238);
+        @media screen and (max-width:767px){
+            padding: 20px ;
+            margin-top: 15px;
+        }
+        .invitation-list{
+            overflow: hidden;
+            li{
+                display: flex;
+                border-bottom: solid 1px rgb(238, 239, 241);
+                padding: 15px 0;
+                margin: 0 -10px;
+                flex-wrap: wrap;
+                &:last-child{
+                    border: 0;
+                }
+                > p{
+                    padding: 0px 10px;
+                }
+            }
+        }
+    }
+    .request-join-tab{
+        .join-single{
+            display: flex;
+           
+            padding-left: 55px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: solid 1px rgb(224, 224, 224);
+            justify-content: space-between;
+            position: relative;
+            @media screen and (max-width:767px) {
+               flex-wrap: wrap;
+            }
+            img{
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 9px;
+            }
+        }
+    }
+    
+    .status-tag{
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        background: #66ACCF;
+        border-radius: 6px;
+        padding: 4px 8px;
+        &.bg-red{
+            background: #EE4F4F;
+        }
+    }
+}
+
+/*Modal CSS*/
+.specific-date-modal-dialog{
+    max-width: 660px;
+    .specific-date-list{
+        margin-bottom: 20px;
+        max-height: 55vh;
+        overflow-y: auto;
+        li{
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(16, 44, 66);
+            line-height: 1;
+            padding: 20px 0;
+            border-bottom: solid 0.6px rgb(218, 220, 224);
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+}
+.delete-event-modal-dialog{
+    max-width: 660px;
+    button{
+        min-width: 220px;
+        @media screen and (max-width:767px) {
+            min-width: auto;
+            margin-bottom: 20px;
+        }
+    }
+}
+.rejection-modal-dialog{
+    max-width: 660px;
+    textarea{
+        resize: none;
+        min-height: 100px;
+    }
+}
+
+.dark-grey-bg {
+    background: #587e85 !important;
+}
+
+.theme-green-bg {
+    background: #a9cf3d !important;
+}
+
+.modal-employee-list_ul{
+    margin-bottom: 40px;
+    max-height: 35vh;
+    overflow-y: auto;
+}
+.modal-employee-list_ul  li {
+    padding: 12px 0;
+    border-bottom: solid 1px #dadce0;
+}
+
+.pending_li{
+    text-align: right;
+}
+
+.para_p{
+    text-align: justify;
+}
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="7.25083333 4.66666667 5.83333333 8.8817842e-16 4.41583333 4.66666667 -3.04645198e-13 4.66666667 3.605 7.23916667 2.23416667 11.6666667 5.83333333 8.93083333 9.43833333 11.6666667 8.0675 7.23916667 11.6666667 4.66666667"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#A9B0BD" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <rect fill="#FCC539" fill-rule="nonzero" mask="url(#mask-2)" x="-1.16" y="-1" width="7" height="13"></rect>
+        </g>
+    </g>
+</svg>

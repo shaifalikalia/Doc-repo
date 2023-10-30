@@ -1,0 +1,49 @@
+.select-sec-modal{
+    &.modal-dialog{
+        max-width: 660px;
+        .modal-content{
+            padding:50px 30px 20px;
+    
+        }
+    }
+    .section-list{
+        margin:20px 0 40px;
+        max-height: 55vh;
+        overflow-y: auto;
+        li{
+            border-bottom: solid 1px #dadce0;
+            .ch-radio{
+                 label {
+                cursor: pointer;
+                display: block;
+                padding: 15px 0;
+                }
+                span{
+                    color: #102c42;
+                }
+            }
+        }
+    }
+    .btn-box{
+        
+        align-items: center;
+        .button {
+            min-width: 120px;
+
+        }
+    }
+}
+.confirm-contract-modal{
+    max-width: 660px;
+    .ch-checkbox {
+        span{
+            &::before{
+                top: 3px;
+            }
+        }
+ input[type="checkbox"]:checked + span::after,  input[type="checkbox"]:checked ~ span::after, 
+         input[type="radio"]:checked + span::after,  input[type="radio"]:checked ~ span::after{
+             top: 6px;
+         }
+    }
+}

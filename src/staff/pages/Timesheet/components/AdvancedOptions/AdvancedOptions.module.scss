@@ -1,0 +1,330 @@
+.timesheet-advanced-options {
+    padding-bottom: 15px;
+    .log-timesheet {
+        margin-top: 20px;
+    }
+    .advanced-option-btn {
+        img {
+            transform: rotate(180deg);
+        }
+        &.show {
+            img {
+                transform: rotate(0deg);
+            }
+        }
+        &.disable {
+            color: #ccc;
+            img{
+                opacity: 0.3;
+            }
+        }
+    }
+    .work-task-common {
+        padding: 20px 20px 1px;
+        border-radius: 6px;
+        background-color: #f9fcee;
+        &.showDiv {
+            display: block;
+        }
+        &.hideDiv {
+            display: none;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 10px 15px 1px;
+        }
+        .log-dropdown-toggle {
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #d8d8d8;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+        .log-menu {
+            border: 0;
+            right: 0;
+            padding: 0 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+            @media screen and (max-width: 767px) {
+                padding: 0 15px;
+            }
+            .menu-item {
+                cursor: pointer;
+                font-size: 13px;
+                color: #111b45;
+                padding: 10px 0px;
+                border-bottom: 1px solid #eeeff1;
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+        .custom-box {
+            margin-top: 15px;
+            input {
+                background-color: transparent;
+            }
+            input.custom-input {
+                background-color: #fff;
+                width: 100%;
+                outline: 0;
+                border: 1px solid #dadada;
+                font-size: 14px;
+                height: 48px;
+                padding: 4px 15px;
+                border-radius: 5px;
+                color: #102c42;
+                font-weight: 600;
+                &::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: #979d9f;
+                    opacity: 0.5; /* Firefox */
+                    font-weight: 400;
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #979d9f;
+                    font-weight: 400;
+                    opacity: 0.5;
+                }
+
+                &::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: #979d9f;
+                    font-weight: 400;
+                    opacity: 0.5;
+                }
+            }
+        }
+        .add-desc {
+            margin-bottom: 30px;
+            img {
+                width: 12px;
+                height: 12px;
+                margin-right: 3px;
+            }
+        }
+    }
+    .add-task {
+        margin: 30px 0 0;
+        img {
+            width: 12px;
+            height: 12px;
+            margin-right: 3px;
+        }
+    }
+}
+
+.time-picker {
+    input {
+        border: none;
+        border-bottom: 1px solid #d8d8d8;
+        padding: 5px 0 15px;
+        font-weight: 700;
+        color: #102c42;
+        font-size: 14px;
+        box-shadow: none;
+        outline: 0;
+        background-color: transparent;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    input:disabled {
+        background: var(--color-white);
+        color: #102c42;
+        cursor: text;
+    }
+}
+
+.time-picker-popup {
+    input {
+        font-weight: 700;
+        color: #9a9ea1;
+        font-size: 14px;
+    }
+}
+.custom-textarea-control {
+    background-color: transparent;
+    resize: none;
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #102c42;
+        opacity: 0.5; /* Firefox */
+        font-weight: 600;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #102c42;
+        font-weight: 600;
+        opacity: 0.5;
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #102c42;
+        font-weight: 600;
+        opacity: 0.5;
+    }
+}
+
+.placeholder {
+    opacity: 0.5;
+}
+.details-common {
+    @media screen and (min-width: 1200px) {
+        padding-left: 70px;
+    }
+
+    .detail-status-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        .status-box {
+            border-radius: 6px;
+            // background-color: #ee4f4f;
+            padding: 5px 8px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+
+            .timesheet-filled {
+                background-color: var(--color-timesheet-filled);
+            }
+
+            .timesheet-red {
+                background-color: var(--color-timesheet-red);
+            }
+
+            .timesheet-paid {
+                background-color: var(--color-timesheet-paid);
+            }
+        }
+    }
+    .detail-card {
+        background-color: #f9fcee;
+        padding: 20px 20px 1px;
+        cursor: default;
+        @media (max-width: 767px) {
+            padding: 15px 15px 1px;
+        }
+        .c-field {
+            margin-bottom: 20px;
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+            label {
+                font-size: 12px;
+            }
+        }
+        .desc-field {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            word-break: break-word;
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+            label {
+                font-size: 12px;
+            }
+        }
+    }
+    .invoice-btn {
+        display: flex;
+        margin: 30px 0 20px;
+    }
+    .task-accordion {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
+        .arrow-icon {
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            padding: 0 1rem;
+            margin-right: -1rem;
+            transform: rotate(180deg);
+            img {
+                width: 12px;
+                height: 12px;
+            }
+            &.show {
+                transform: rotate(0);
+            }
+        }
+    }
+}
+.timesheet-hour-accordion {
+    .detail-card {
+        background-color: #f9fcee;
+        padding: 20px 20px 1px;
+        cursor: default;
+        @media (max-width: 767px) {
+            padding: 15px 15px 1px;
+        }
+    }
+    .task-accordion {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
+        .arrow-icon {
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            padding: 0 1rem;
+            margin-right: -1rem;
+            transform: rotate(180deg);
+            img {
+                width: 12px;
+                height: 12px;
+            }
+            &.show {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    .work-task-common {
+        padding: 0;
+    }
+}
+.work-task-modal {
+    .custom-box {
+        margin-top: 15px;
+        margin-bottom: -15px;
+        position: relative;
+        .add-btn {
+            position: absolute;
+            right: 0;
+            top: 30px;
+        }
+    }
+    .work-list {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        max-height: 360px;
+        overflow-y: auto;
+        li {
+            border-bottom: solid 0.6px rgb(218, 220, 224);
+            padding: 16px 0;
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+}

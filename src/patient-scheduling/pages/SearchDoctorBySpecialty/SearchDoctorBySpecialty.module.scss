@@ -1,0 +1,134 @@
+.page {
+    min-height: calc(100vh - 80px);
+
+    @media (max-width: 900px) {
+        margin-top: 52px;
+        min-height: calc(100vh - 52px);
+    }
+}
+.search-input-card{
+    position: relative;
+
+    a {
+        text-decoration: none !important;
+    }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        flex: none !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+    .search-input {
+        border: none;
+        outline: none;
+        width: 100%;
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #979d9f;
+            opacity: 0.5; /* Firefox */
+            font-weight: 400;
+          }
+          
+          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #979d9f;
+            font-weight: 400;
+            opacity: 0.5;
+          }
+          
+          &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #979d9f;
+            font-weight: 400;
+            opacity: 0.5;
+          }
+    }
+    .input-card-layout {
+        height: 18px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+        img {
+            margin-right: 10px
+        }
+    }
+    .doctor-search-box{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+        background-color: #fff;
+        z-index: 11;
+        margin-top: 1px;
+        
+        .services-list{
+            li{
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+        li{
+                border-bottom: solid 1px #dadce0;
+            padding: 10px 0;
+            .img-box{
+                margin-right: 16px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                }
+            }
+        }
+        
+        .search-all{
+            display: flex;
+            padding: 20px 0 10px;
+            img{
+                margin-right: 10px;
+                height: 16px;
+                width: auto;
+            }
+            .search-text{
+                text-decoration: underline;
+                color:  #577d84;
+            }
+        }
+    }
+}
+.speciality-card{
+    margin-top: 30px;
+    padding: 20px 20px 14px !important;
+
+    a {
+        text-decoration: none !important;
+        color: #587e85 !important;
+    }
+    
+    .speciality-list{
+        &.speciality-list-last{
+            li{
+                &:last-child{
+                    border:0;
+                }
+               
+            }
+        }
+        li{    
+            padding: 12px 0;
+            border-bottom: #dadce0 1px solid;
+            font-size: 14px;
+                 color: #587e85;
+                 font-weight: 600; 
+                 @media screen and (min-width:992px) {
+                    &:last-child{
+                        border-bottom:0;      
+                    }
+                 }  
+           
+        }
+    }
+}

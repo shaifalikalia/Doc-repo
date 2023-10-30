@@ -1,0 +1,31 @@
+.add-shipment-detail{
+    .modal-content{
+        padding-top: 50px;
+        .add-title{
+            margin-top: 35px;
+        }
+        .alert-box{
+            margin-top: 20px;
+        }
+        .error-msg{
+            margin-top: -30px;
+            margin-bottom: 30px;
+        }
+        button{
+            margin-top: 10px;
+
+        }
+    }
+}
+.additional-item-dialog{
+    .error-msg{
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+}
+.tracking-modal{
+    .modal-content{
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
+}

@@ -1,0 +1,22 @@
+
+    .page-step
+    {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #587e85;
+        margin-bottom: 30px;
+    }
+
+    .sub-title{
+        font-size: 14px;
+        font-weight: 300;
+        font-family: "Poppins";
+        line-height: 21px;
+        letter-spacing: 0.28px;
+        color: black;
+    
+        @media (max-width: 767px) {
+            fontsize:14px;
+        }
+    }

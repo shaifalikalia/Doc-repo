@@ -1,0 +1,99 @@
+.promo-code-tab {
+    li {
+        a {
+            background-color: transparent !important;
+            padding: 18px 0 !important;
+            margin-right: 60px;
+        }
+    }
+}
+
+.empty-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 45vh;
+}
+
+.promo-code-card {
+    padding: 30px 30px 5px !important;
+    @media screen and (max-width:767px) {
+        padding: 20px 20px 1px !important;
+    }
+    a {
+        text-decoration: none;
+    }
+    .card-status-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media screen and (max-width:767px) {
+            flex-direction:column;
+            align-items: flex-start;
+            > a, > p{
+                order: 2;
+            }
+        }
+        .status-box {
+            background: #66accf;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            @media screen and (max-width:767px) {
+                order: 1;
+                margin-bottom: 15px;
+                }
+            &.expired {
+                background: #ee4f4f;
+            }
+            &.launched {
+                background: #66accf;
+            }
+        }
+     
+    }
+  .btn-box  button{
+    min-height: 52px;
+    padding: 14px 35px;
+    
+      
+    }
+    .promocode-button{
+        padding: 11px 35px;
+        min-height: 40px !important;
+    }
+}
+
+.promocode-generate-row{
+    position: relative;
+    .generate-btn{
+        position: absolute;
+        right: 0;
+        top: 26px;
+    }
+    input{
+        padding-right: 65px;
+    }
+}
+.select-customer-radio{
+    position: relative;
+    .link-btn{
+        position: absolute;
+        right: 0;
+        top: 8px;
+        @media screen and (max-width:767px) {
+            position: static;
+        }
+    }
+    .count-box{
+        margin-left: 28px;
+        margin-top: -10px;
+    }
+}

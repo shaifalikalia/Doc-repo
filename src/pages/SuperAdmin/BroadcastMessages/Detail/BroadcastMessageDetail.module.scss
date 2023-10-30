@@ -1,0 +1,40 @@
+.broadcast-message-detail {
+    .broadcast-card {
+        padding: 70px;
+        .btn-link {
+            float: right;
+        }
+        .inner-wrapper {
+            max-width: 420px;
+            margin-bottom: 40px;
+            .c-field {
+                margin-bottom: 25px;
+                white-space: pre-line;
+            }
+        }
+    }
+}
+.view-user-modal {
+    max-width: 660px;
+
+    .all-offices {
+        font-size: 14px;
+        font-weight: 500;
+        color: #77928b;
+        margin-bottom: 7px;
+        img {
+            width: 6px;
+            margin-left: 10px;
+        }
+    }
+    .office-list {
+        margin-bottom: 10px;
+        li {
+            border-bottom: solid 1px #dadce0;
+            padding: 14px 0;
+            font-weight: 600;
+            font-size: 14px;
+            color: #102c42;
+        }
+    }
+}

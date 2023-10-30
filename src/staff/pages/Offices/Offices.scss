@@ -1,0 +1,8 @@
+.approval-modal{
+    .modal-content{
+        padding: 50px 30px 20px;
+        @media screen and (max-width:767px) {
+            padding: 20px 15px 20px;  
+        }
+    }
+}

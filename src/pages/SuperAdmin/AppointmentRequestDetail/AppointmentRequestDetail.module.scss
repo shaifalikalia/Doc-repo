@@ -1,0 +1,64 @@
+.busyslot-detail-card{
+    padding: 70px !important;
+    position: relative;
+    .status {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        font-size: 12px;
+    }
+    .pending {
+        background-color: #66ACCF;
+    }
+    .completed {
+        background-color: #A9CF3D;
+    }
+    cursor: default !important;
+    @media screen and (max-width:767px) {
+        padding: 30px !important;
+     }
+    .delete-edit-icons{
+        margin-bottom: 10px;
+        img{
+            cursor: pointer;
+            margin-left: 27px;
+        }
+    }
+    .white-col-list{
+        margin-bottom: 40px;
+        li{
+            margin-bottom: 25px;
+            .tag-list{
+                display: flex;
+                span{
+                    color: rgb(47, 50, 68);
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin: 10px  5px 0 0;
+                    padding: 6px 15px 9px;
+                    border-radius: 14px;
+                    background-color: rgb(242, 243, 239);
+                    animation: none;
+                }
+            }
+        }
+    }
+  
+}
+
+/*Modal CSS*/
+
+.delete-appointment-modal-dialog{
+    max-width: 660px;
+    button{
+        min-width: 220px;
+        @media screen and (max-width:767px) {
+            min-width: auto;
+            margin-bottom: 20px;
+        }
+    }
+}

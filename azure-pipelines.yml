@@ -1,0 +1,98 @@
+variables:
+  # These variables are used by docker-compose.build.yml
+  DOCKER_REGISTRY: $(dockerRegistry)
+  IMAGE_VERSION: 1.0.$(Build.BuildId)
+
+  OFFICE_BASE_URL: $(officeBaseUrl)
+  USER_BASE_URL: $(userBaseUrl)
+  TIMESHEET_BASE_URL: $(timesheetBaseUrl)
+  UTILITY_BASE_URL: $(utilityBaseUrl)
+  JOB_BASE_URL: $(jobBaseUrl)
+  SUBSCRIPTION_BASE_URL: $(subscriptionBaseUrl)
+  HOLIDAY_BASE_URL: $(holidayBaseUrl)
+  CMS_BASE_URL: $(cmsBaseUrl)
+  LEAVE_BASE_URL: $(leaveBaseUrl)
+  PATIENT_SCHEDULING_BASE_URL: $(patientSchedulingBaseUrl)
+  CONTRACT_BASE_URL: $(contractBaseUrl)
+  PERFORMANCE_REVIEW_BASE_URL: $(performanceReviewBaseUrl)
+  REACT_APP_SCHEDULER_BASE_URL: $(schedulerBaseUrl)
+  REACT_APP_NOTES_BASE_URL: $(notesBaseUrl)
+  REACT_APP_TASK_MANAGEMENT_BASE_URL: $(taskManagementBaseUrl)
+  REACT_APP_NOTIFICATIONS_BASE_URL: $(notificationsBaseUrl)
+  REACT_APP_TAX_MANAGEMENT_BASE_URL: $(taxManagementBaseUrl)
+  REACT_APP_VENDOR_MANAGEMENT_BASE_URL: $(vendorManagementBaseUrl)
+  PATIENT_ANDROID_APP_STORE_LINK: $(patientAndroidAppStoreLink)
+  PATIENT_IOS_APP_STORE_LINK: $(patientIosAppStoreLink)
+  CURRENT_ENV: $(currentEnv)
+  CUSTOMER_ORDER_BASE_URL: $(customerOrderBaseUrl)
+  PROMOCODES_BASE_URL: $(promocodesBaseUrl)
+  PERSONNEL_BASE_URL: $(personnelBaseUrl)
+  REACT_APP_SENTRY_URL: $(WebSentryErrorLogAPIKey)
+
+  AD_AUTHORITY_SUSI: $(adAuthoritySusi)
+  AD_AUTHORITY_PR: $(adAuthorityPr)
+  AD_AUTHORITY_SU: $(adAuthoritySu)
+
+  AUTH_SCOPE: $(authScope)
+  WEB_APP_CLIENT_ID: $(webAppClientId)
+
+
+  STORAGE_ACCOUNT_NAME: $(storageAccountName)
+  STORAGE_CONTAINER_NAME: accountpictures
+
+  FIREBASE_API_KEY: $(firebaseApiKey)
+  FIREBASE_AUTH_DOMAIN: $(firebaseAuthDomain)
+  FIREBASE_DATABASE_URL: $(firebaseDataBaseUrl)
+  FIREBASE_PROJECT_ID: $(firebaseProjectId)
+  FIREBASE_STORAGE_BUCKET: $(firebaseStorageBucket)
+  FIREBASE_MESSAGING_SENDER_ID: $(firebaseMessagingSenderId)
+  FIREBASE_APP_ID : $(firebaseAppId)
+  FIREBASE_MEASUREMENT_ID : $(firebaseMeasurementId)
+  FIREBASE_PUBLIC_KEY : $(firebasePublicKey)
+  SUPPORT_HELPDESK_BASE_URL : $(supportHelpDeskBaseUrl)
+  PROMOTION_BASE_URL : $(promotionBaseUrl)
+
+
+  SENDBIRD_APP_ID: $(sendbirdAppId)
+  STRIPE_LOGIN_URL: $(stripeLoginUrl)
+  SENDBIRD_API_TOKEN: $(sendbirdApiToken)
+  SENDBIRD_REQUEST_URL: $(sendbirdRequestUrl)
+
+  STRIPE_SECRET_KEY: $(stripeSecretKey)
+  GOOGLE_API_KEY: $(googleApiKey)
+
+  
+name: $(BuildDefinitionName).$(DayOfYear)$(Rev:.r)
+trigger:
+  branches:
+    include:
+        - test
+  
+pool:
+  vmImage: 'ubuntu-latest'
+  
+steps:
+- script: az login --service-principal --username $(tfClientId) --password $(tfClientSecret) --tenant $(tenantId)
+  displayName: 'az login'
+
+- script: az acr login --name $(dockerRegistryName)
+  displayName: 'az acr login'
+
+- script: docker-compose -f docker-compose.build.yml build webui
+  displayName: 'docker-compose build'
+
+- script: docker push $(dockerRegistry)/webui:1.0.$(Build.BuildId)
+  displayName: 'Push webui image'
+
+- script: az aks get-credentials --name $(clusterName) --resource-group $(clusterResourceGroup)
+  displayName: 'Get K8s credentials'
+
+- task: ShellScript@2
+  inputs:
+    scriptPath: ./prep_k8s_deployments.sh
+    args: $(deployEnvironment)
+  displayName: 'Prep k8s deployment files'
+
+- script: kubectl apply -f .
+  displayName: 'kubectl apply'
+  workingDirectory: ./k8s/$(deployEnvironment)  

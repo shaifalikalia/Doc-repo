@@ -1,0 +1,56 @@
+.page-step {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #587e85;
+    margin-bottom: 30px;
+}
+
+.edit-profile {
+    .inner-form {
+        border-right: solid 1px rgba(151, 151, 151, 0.4);
+
+        @media screen and (max-width: 991px) {
+            border-right: none;
+
+        }
+
+        .field-group {
+            border-right: none;
+            max-width: 60%;
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+
+            }
+
+
+        }
+    }
+    .edit-profile-tabs{
+        .nav-tabs{
+        margin-bottom: 35px;
+       
+        }
+    }
+}
+
+.card-details{
+    .card-img{
+        margin-right:20px;
+    }
+    .change-card-details{
+    float: right;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    color: #587E85;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    @media screen and (max-width: 991px) {
+float:left;
+margin-top:24px;
+
+    }
+    }
+}

@@ -1,0 +1,147 @@
+.timesheet-view-wrapper{
+    margin-bottom: 50px;
+    .page-sub-heading{
+        margin-top: -15px;
+    }
+    .calendar-box{
+        max-width: 410px;
+        display: flex;
+        margin-left: auto;
+        justify-content: space-between;
+        margin-top: -65px;
+        @media screen and (max-width:767px) {
+           margin-top: 30px;
+           margin-left: 0;
+        }
+    }
+    .timesheet-table{
+        margin-bottom: 20px;
+        .label-text{
+            color: #6f7788;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .table-header-row{
+            border-radius: 10px;
+            background-color: #587e85;
+            display: flex;
+            margin: 0 0 10px ;
+            @media screen and (max-width:767px) {
+                display:block;
+                position: relative;
+            }
+            .icon-arrow{
+                display: none;
+                @media screen and (max-width:767px) {
+                    display:block;
+                    position: absolute;
+                    top: 16px;
+                    right: 0px;
+                    cursor: pointer;
+                    padding: 10px 15px;
+                }
+            }
+            &.show{
+                .icon-arrow{
+                   transform: rotate(180deg);
+                }
+                .header-right{
+                    display: flex;
+                }
+            }
+            .header-left{
+                border-right: solid 1px #698b91;
+                padding: 14px 30px;
+                min-width: 220px;
+                @media screen and (max-width:767px) {
+                    border-right: 0;
+                    border-bottom: solid 1px #698b91;
+                    padding: 20px 0 15px;
+                    margin: 0 15px 10px;
+                }
+            }
+            .header-right{
+                display: flex;
+                margin: 0;
+                justify-content: space-evenly;
+                width: calc(100% - 220px);
+                padding:14px 20px 14px 50px; 
+                @media screen and (max-width:767px) {
+                  flex-wrap: wrap;
+                  width: 100%;
+                  justify-content: unset;
+                  padding: 10px 15px 1px;
+                  display: none;
+                }
+                li{
+                  width: 20%;
+                  @media screen and (max-width:767px) {
+                    width: 50%;
+                    margin-bottom: 15px;
+                }
+                }
+            }
+            .label-text{
+                color: #cad3c0;
+            }
+            .main-text{
+                color: #fff;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .table-body{
+            padding: 30px 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            @media screen and (max-width:767px) {
+               padding:10px 15px
+            }
+            .table-body-row{
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                @media screen and (max-width:767px) {
+                    display:block
+                }
+                .main-text{
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #102c42;
+                }
+                .body-left{
+                    padding: 14px 30px 14px 0;
+                    min-width: 190px;
+                    @media screen and (max-width:767px) {
+                       padding: 9px 0;
+                    }
+                    .main-text{
+                        font-size: 15px;
+                      
+                    }
+                }
+                .body-right{
+                    border-radius: 6px;
+                    background-color: #f9fcee;
+                    display: flex;
+                    width: calc(100% - 190px);
+                    padding: 14px 30px;
+                    @media screen and (max-width:767px) {
+                      flex-wrap: wrap;
+                      width: 100%;
+                    }
+                    li{
+                        
+                        width: 25%;
+                        @media screen and (max-width:767px) {
+                            width: 50%;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

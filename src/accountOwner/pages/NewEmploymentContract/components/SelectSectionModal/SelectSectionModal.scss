@@ -1,0 +1,40 @@
+.select-sec-modal{
+    &.modal-dialog{
+        max-width: 660px;
+        .modal-content{
+            padding:50px 30px 20px;
+    
+        }
+    }
+    .section-list{
+        margin:20px 0 40px;
+        max-height: 55vh;
+        overflow-y: auto;
+        li{
+            border-bottom: solid 1px #dadce0;
+            .ch-radio{
+                 label {
+                cursor: pointer;
+                display: block;
+                padding: 15px 0;
+                }
+                span{
+                    color: #102c42;
+                }
+            }
+        }
+    }
+    .btn-box{
+        align-items: center;
+        @media screen and (max-width:767px){
+           flex-direction: column;
+        }
+        .button {
+            min-width: 120px;
+            @media screen and (max-width:767px){
+                width: 100%;
+              
+            }
+        }
+    }
+}

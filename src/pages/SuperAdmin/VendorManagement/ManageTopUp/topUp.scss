@@ -1,0 +1,85 @@
+.add-topUp {
+
+    .button {
+
+        line-height: 1.4;
+        padding: 16px 30px;
+
+    }
+}
+
+.topUp-table {
+    .data-table-block {
+        .data-table-container {
+            .table {
+                tbody {
+                    tr {
+                        td {
+
+
+                            &:first-child {
+                                font-weight: 400;
+                                color: #535b5f;
+
+
+                            }
+
+
+                            &:nth-child(5) {
+
+                                .pointer {
+                                    margin-left: 116px;
+                                }
+
+                            }
+
+                            span {
+                                font-size: 12px;
+                                cursor: pointer;
+                                font-weight: 500;
+
+                                &:hover {
+                                    color: #a9cf3d;
+                                }
+
+
+
+                            }
+
+
+                        }
+
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .pagnation-block {
+            margin-top: 80px;
+
+        }
+
+    }
+}
+
+.topup-modal {
+    .modal-content {
+
+
+
+
+        .modal-body {
+            .last-field {
+                padding-top: 10px;
+
+            }
+
+
+        }
+    }
+}

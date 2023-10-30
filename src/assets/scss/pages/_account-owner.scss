@@ -1,0 +1,98 @@
+.owners-list-block , .personnel-list-block ,.demo-request-list-block {
+    @include padding(30 0);
+
+    @media (max-width: 767px) {
+        @include padding(16 0);
+    }
+
+    .header {
+        @include margin-top(15);
+
+        @media (max-width: 767px) {
+            margin-top: 0;
+
+            .button {
+                width: 100%;
+            }
+        }
+
+        .title {
+            color: $heading-color;
+            font-weight: 500;
+            @include fontsize(25);
+            line-height: 25px;
+            margin: 0;
+
+            @media (max-width: 767px) {
+                @include fontsize(20);
+                margin-top: 23px;
+             //   margin-bottom: 20px;
+            }
+        }
+
+        .filter-section
+        {
+            .member-filter 
+            {
+                .react-select-container 
+                {
+                    .react-select__control
+                    {
+                        padding-left:30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .data-list {
+        margin-top: 30px;
+
+        @media (max-width: 767px) {
+            margin-top: 20px;
+        }
+    }
+
+    .request-filter {
+        position: relative;
+        // margin-top:30px;
+        .react-select-container {
+            width: 207px;
+            float: left;
+    
+            @media (max-width: 767px) {
+                width: 191px;
+            }
+    
+            .react-select__control {
+                @include padding(0 0 0 20);
+                border-radius: 5px;
+                box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+                background-color: $white;
+                border: 0;
+                @include fontsize(14);
+                font-weight: 500;
+                width: 100%;
+                min-height: 50px;
+    
+                @media (max-width: 767px) {
+                    min-height: 40px;
+                }
+            }
+    
+            .react-select__single-value {
+                color: #77928b;
+            }
+    
+            .react-select__indicator-separator {
+                display: none;
+            }
+    
+            .react-select__dropdown-indicator {
+                padding: 0;
+                margin-right: 15px;
+                color: #77928b;
+            }
+        }
+    }
+}

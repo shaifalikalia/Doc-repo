@@ -1,0 +1,38 @@
+.basic-container{
+max-width: 1170px;
+.title{
+    margin-top:9px;
+}
+
+    .plan-detail-box{
+        padding: 0px;
+        box-shadow: none;
+        margin-top: 0px;
+
+h3{
+    font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+color: #587E85;
+margin-bottom: 30px;
+}
+
+.left-container{
+
+padding-left: 0px;
+    padding-right: 30px;
+    .inner-left{
+        background-color: #F9FCEE;
+        padding: 30px;
+    }
+}
+.right-container{
+    padding-left: 30px;
+    background-color: #F9FCEE;
+    .inner-right{
+        background-color: #F9FCEE;
+        padding: 30px;
+    }
+}
+
+}}

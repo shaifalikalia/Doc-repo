@@ -1,0 +1,77 @@
+.add-event-form{
+    max-width: 460px;
+}
+.c-field-label{
+    color: #79869a;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+.add-employee-modal-dialog{
+    max-width: 660px;
+    .search-box{
+        width: 100%;
+        margin: 40px 0 30px;
+        @media screen and (max-width:767px){
+            margin-top:25px
+        }
+        input{
+            border: solid 1px rgb(218, 218, 218);
+            width: 100%;
+           padding: 13px 15px 13px 40px}
+        span.ico {
+            top: 14px;   
+        }
+    }
+    .employee-list{
+        margin-bottom: 40px;
+        max-height: 35vh;
+        overflow-y: auto;
+        @media screen and (max-width:767px){
+            margin-bottom:30px
+        }
+        li{
+            padding: 12px 0;
+            border-bottom: solid 1px rgb(218, 220, 224);
+          
+        }
+    }
+}
+
+.add-roles-modal-dialog{
+    max-width: 660px;
+    
+    .roles-list{
+        margin-bottom: 40px;
+        max-height: 35vh;
+        overflow-y: auto;
+        @media screen and (max-width:767px){
+            margin-bottom:30px
+        }
+        li{
+            padding: 16px 0 12px;
+            border-bottom: solid 1px rgb(218, 220, 224); 
+            label{
+                margin: 0;
+            }     
+        }
+    }
+}
+
+.loader-position {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2px;
+    margin: 8px;
+
+    @media (max-width: 767px) {
+        right: unset;
+        left: 0;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+}

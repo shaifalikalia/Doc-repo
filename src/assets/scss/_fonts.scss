@@ -1,0 +1,83 @@
+//Fonts
+@include font-face($font, "#{$font-path}/inter-ui-regular-webfont", 400, normal);
+@include font-face($font, "#{$font-path}/inter-ui-italic-webfont", 150, normal);
+@include font-face($font, "#{$font-path}/inter-ui-medium-webfont", 600, normal);
+@include font-face($font, "#{$font-path}/inter-ui-bold-webfont", 700, normal);
+@include font-face($font, "#{$font-path}/inter-ui-black-webfont", 800, normal);
+@font-face {
+    font-family: 'icomoon';
+    src: url("#{$icon-font-path}/icomoon.eot?sq32ow");
+    src: url("#{$icon-font-path}/icomoon.eot?sq32ow#iefix") format("embedded-opentype"),
+    url("#{$icon-font-path}/icomoon.ttf?sq32ow") format("truetype"),
+    url("#{$icon-font-path}/icomoon.woff?sq32ow") format("woff"),
+    url("#{$icon-font-path}/icomoon.svg?sq32ow#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-users:before {
+  content: "\e910";
+}
+.icon-admin:before {
+  content: "\e90f";
+}
+.icon-logout:before {
+  content: "\e90e";
+}
+.icon-checked:before {
+  content: "\e90c";
+}
+.icon-rate-star:before {
+  content: "\e90d";
+}
+.icon-close:before {
+  content: "\e90b";
+}
+.icon-pencil:before {
+  content: "\e909";
+}
+.icon-delete-button:before {
+  content: "\e90a";
+}
+.icon-plus-button:before {
+  content: "\e908";
+}
+.icon-dots:before {
+  content: "\e906";
+}
+.icon-clock:before {
+  content: "\e907";
+}
+.icon-download-button:before {
+  content: "\e905";
+}
+.icon-no-call:before {
+  content: "\e904";
+}
+.icon-caret-down:before {
+  content: "\e900";
+}
+.icon-home:before {
+  content: "\e901";
+}
+.icon-phone-arrow:before {
+  content: "\e902";
+}
+.icon-report:before {
+  content: "\e903";
+}

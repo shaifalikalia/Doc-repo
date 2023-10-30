@@ -1,0 +1,22 @@
+.invoices-search {
+    min-width: 420px;
+    input{
+        padding: 15px 15px 15px 41px;
+    }
+    @media screen and (max-width:767px) {
+        min-width: auto;
+    }
+}
+.invoices-select {
+    > div {
+        width: 225px !important;
+        float: none !important;
+        @media screen and (max-width:767px) {
+           width: 100% !important;
+           margin-top: 16px;
+           >div {
+        min-height: 50px !important;
+           }
+        }
+    }
+}

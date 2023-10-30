@@ -1,0 +1,59 @@
+.vendor-free-trial {
+
+    .vendor-trial-container {
+        max-width: 432px;
+    }
+
+    .vendor-free-trial-card {
+        @media screen and (max-width: 767px) {
+            padding: 20px 20px 30px;
+        }
+    }
+
+    .vendor-free-trial-heading {
+        line-height: 35px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #111B45;
+
+        @media screen and (max-width: 767px) {
+            line-height: 24px;
+        }
+    }
+
+    .sub-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: 24px;
+
+        color: #79869A;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .vendor-billing {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        color: #587E85;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .vendor-free-trial-error {
+        margin-top: -20px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 767px) {
+            margin-top: -25px;
+        }
+    }
+}

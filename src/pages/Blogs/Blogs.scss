@@ -1,0 +1,134 @@
+.static-blog {
+    .container{
+       max-width: 1470px; 
+       @media (max-width: 1500px) {
+        max-width: 1200px;
+    }
+    }
+    .static-blog-card {
+        padding:60px 150px;
+        @media screen and (max-width:767px) {
+            padding: 30px 20px 40px;
+        }
+    }
+
+    hr {
+        margin: 48px 0px;
+
+        @media screen and (max-width:767px) {
+            margin: 30px 0px;
+        }
+    }
+
+
+
+    .title {
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 64px;
+        color: #2F3245;
+        letter-spacing: -1px;
+        margin-bottom: 48px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+    }
+
+    .image-div {
+        margin-bottom: 48px;
+        img{
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+
+        }
+    }
+
+    .sub-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 40px;
+        color: #2D3245;
+        margin-bottom: 16px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &.super-sub-title {
+            font-size: 24px;
+
+            @media screen and (max-width:767px) {
+
+                font-size: 20px;
+
+            }
+        }
+
+
+
+    }
+
+    .description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2D3245;
+        margin-bottom: 48px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+            font-size: 14px;
+
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration-line: underline;
+            color: #587E85;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 18px;
+
+            li {
+                margin-bottom: 8px;
+            }
+        }
+
+    }
+
+    .social-media-links {
+        .links-heading {
+            font-weight: 300;
+            font-size: 16px;
+            color: #5B6B82;
+        }
+
+        ul li {
+            display: inline-block;
+           margin-right: 20px;
+          &:nth-last-child(1){
+            margin-right: 0px;
+
+          }
+
+           a{
+            padding: 0px 5px;
+           }
+        }
+
+    }
+}

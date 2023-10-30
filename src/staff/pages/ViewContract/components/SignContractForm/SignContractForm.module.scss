@@ -1,0 +1,54 @@
+
+
+.step-form-wrapper{
+    .card-container{
+        cursor: default;
+        @media screen and (max-width:767px) {
+            padding: 20px;
+                
+            }
+        .-mt-30{
+            margin-top: -30px;
+        }
+    }
+    .more-detail-link{
+        display: inline-block;
+        margin: 30px 0 40px;
+        svg, img{
+            width: 12px;
+            height: 12px;
+            margin-right: 2px;
+        }
+    }
+    .upload-border{
+        margin-bottom: 30px;
+        border-bottom: solid 1px rgba(151, 151, 151, 0.4);
+    }
+    .upload-btn-wrapper {
+        position: relative;
+        display: inline-block;
+        input[type=file] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            }
+            .upload-btn {
+            color:  #587e85  ;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: underline;
+            margin: 0px 0 20px;
+        }
+    }
+}
+
+.sign-img {
+    margin-bottom: 25px;
+    img {
+       max-width: 250px;
+       height: auto;
+    }
+}

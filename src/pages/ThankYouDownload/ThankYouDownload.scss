@@ -1,0 +1,556 @@
+/*header-css*/
+
+
+.static-thank-you-header {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+    @media screen and (max-width: 768px) {
+        position: relative;
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        padding: 19px 16px;
+        top: 0px;
+    }
+    img{
+        @media screen and (max-width: 768px) {
+            width: 89px;
+        }
+        
+    }
+
+
+    .container {
+        max-width: 1470px;
+
+        @media screen and (max-width: 1500px) {
+            max-width: 1200px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 1000px;
+        }
+
+
+    }
+
+}
+
+
+
+/*footer-css*/
+
+.static-thank-you-footer {
+    background: #2d3245;
+
+    .footer-block {
+        padding: 80px 0px;
+
+        @media screen and (max-width: 768px) {
+            padding: 40px 0px 35px;
+        }
+
+        @media screen and (max-width: 575px) {
+            padding: 40px 0px 57px;
+        }
+
+
+        .container {
+            max-width: 1470px;
+
+            @media screen and (max-width: 1500px) {
+                max-width: 1200px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                max-width: 1000px;
+            }
+        }
+        .footer-wrapper{
+display: flex;
+@media screen and (max-width: 768px) {
+   display: block;
+}
+
+        .footer-logo {
+
+            margin-top: 17px;
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                margin-bottom: 31px;
+                margin-top: 0px;
+            }
+
+            .logo img {
+                @media screen and (max-width: 768px) {
+                    width: 84px;
+                }
+            }
+        }
+
+        .social-media-links {
+
+            margin-bottom: 16px;
+            text-align: right;
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            ul li {
+                display: inline-block;
+                margin-left: 20px;
+                vertical-align: middle;
+
+                &:nth-child(1) {
+                    margin-left: 0px;
+                }
+
+
+            }
+        }
+
+        .cpy-text {
+
+            font-size: 14px;
+            color: #e0e6ea;
+            font-weight: 400;
+            margin: 0;
+            line-height: 24px;
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                font-size: 12px;
+                line-height: 18px;
+
+            }
+
+            @media screen and (max-width: 575px) {
+
+                max-width: 257px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    }
+}
+
+/*about-miraxis-css*/
+.about-miraxis-section {
+    padding: 100px 0px;
+    background-image: url(./../../assets/images/landing-pages/schedule-demo-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 26% auto;
+    background-color: #F5F5F5;
+
+    @media screen and (max-width: 768px) {
+        padding: 40px 0px 96px;
+    }
+    @media screen and (max-width: 390px) {
+        padding: 40px 0px 66px;
+    }
+
+    @media screen and (max-width: 390px) {
+        padding: 40px 0px 66px;
+    }
+
+    .container {
+        max-width: 1470px;
+
+        @media screen and (max-width: 1500px) {
+            max-width: 1200px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 1000px;
+        }
+
+        .about-miraxis {
+            max-width: 1073px;
+
+            h2 {
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 35px;
+                color: #2D3245;
+                margin-bottom: 32px;
+
+                @media screen and (max-width: 768px) {
+
+                    font-size: 20px;
+                    line-height: 22px;
+                    margin-bottom: 16px;
+
+                }
+
+            }
+
+            p {
+
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 56px;
+                color: #2D3245;
+
+                @media screen and (max-width: 768px) {
+
+                    font-size: 14px;
+                    line-height: 24px;
+
+                }
+
+                .heading {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+/*banner-css*/
+.guide-banner {
+
+    background-image: url(./../../assets/images/landing-pages/guide-banner.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 650px;
+
+    @media screen and (max-width: 768px) {
+        background-image: url(./../../assets/images/landing-pages/guide-mobile-banner.jpg);
+        background-size: auto 320px;
+        background-position: right top;
+        min-height: auto;
+    }
+
+    &.ebook-banner {
+        background-image: url(./../../assets/images/landing-pages/ebook-banner.jpg);
+
+        @media screen and (max-width: 768px) {
+            background-image: url(./../../assets/images/landing-pages/ebook-mobile-banner.jpg);
+        }
+        
+    }
+    &.demo-thank-banner{
+        background-image: url(./../../assets/images/landing-pages/demo-request-banner.jpg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        min-height: 784px;
+    
+        @media screen and (max-width: 768px) {
+            background-image: url(./../../assets/images/landing-pages/demo-banner-mobile.png);
+            background-size: 100% 100%;
+        background-position: unset;
+        min-height: auto;
+        
+    }
+    .banner-image{
+        margin-top: 182px !important;
+    }
+    }
+
+    &.download-page {
+        @media screen and (max-width: 768px) {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 320px;
+                bottom: 0;
+                background-color: #fff;
+                z-index: -1;
+
+
+            }
+        }
+    }
+
+    .container {
+        max-width: 1470px;
+
+        @media screen and (max-width: 1500px) {
+            max-width: 1200px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 1000px;
+        }
+
+        .banner-image {
+            display: flex;
+
+            margin-top: 126px;
+
+            @media screen and (max-width: 991px) {
+                margin-top: 80px;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-top: 60px;
+            }
+
+
+            .guide-banner-text {
+                max-width: 583px;
+
+                @media screen and (max-width: 768px) {
+                    max-width: 100%;
+                }
+
+                .heading {
+                    font-weight: 600;
+                    font-size: 44px;
+                    line-height: 56px;
+
+                    letter-spacing: -1px;
+                    margin-bottom: 32px;
+                    margin-top: 90px;
+
+
+                    color: #2D3245;
+
+                    @media screen and (max-width: 768px) {
+
+                        font-size: 20px;
+                        line-height: 28px;
+                        letter-spacing: -0.19px;
+                        margin-top: 60px;
+                        margin-bottom: 10px;
+                    }
+
+                }
+
+                .description {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #2D3245;
+
+                    @media screen and (max-width: 768px) {
+
+                        font-size: 13px;
+                        line-height: 18px;
+                        margin-bottom: 60px;
+                    }
+
+
+                }
+
+            }
+
+            .guide-download-form {
+                max-width: 705px;
+                width: 100%;
+
+
+
+                padding: 40px;
+                background: #FFFFFF;
+                box-shadow: 0px 9.69125px 29.0738px rgba(0, 0, 0, 0.06);
+                border-radius: 17.4443px;
+
+                @media screen and (max-width: 768px) {
+                    max-width: 100%;
+                    padding: 20px;
+                }
+
+                h2 {
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 45px;
+                    color: #2D3245;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: 768px) {
+
+                        font-size: 20px;
+                        line-height: 30px;
+
+                    }
+
+                }
+
+                #hubspotForm iframe {
+
+                    min-height: 527px !important;
+
+
+                }
+
+                #ebookForm iframe {
+
+                    min-height: 428px !important;
+
+
+                }
+
+
+            }
+
+            .thank-guide-form {
+                max-width: 705px;
+                width: 100%;
+
+                padding: 60px;
+                background: #FFFFFF;
+                box-shadow: 0px 9.69125px 29.0738px rgba(0, 0, 0, 0.06);
+                border-radius: 17.4443px;
+                text-align: center;
+
+                @media screen and (max-width: 768px) {
+                    padding: 20px;
+                    margin-bottom: -15px;
+                }
+
+                img {
+                    margin-bottom: 40px;
+
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 10px;
+                        width: 60px;
+                    }
+                }
+
+                .title {
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 56px;
+                    text-align: center;
+                    letter-spacing: -1px;
+                    color: #2D3245;
+                    margin-bottom: 40px;
+
+                    @media screen and (max-width: 768px) {
+
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-bottom: 10px;
+
+                    }
+                }
+
+                .description {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    text-align: center;
+                    color: #2D3245;
+                    margin-bottom: 10px;
+
+                    @media screen and (max-width: 768px) {
+
+                        font-size: 14px;
+                        line-height: 24px;
+
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+/*guide-note-block-css*/
+
+.guide-note-block {
+    background: #587E85;
+    margin-top: -120px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: -133px;
+        padding-top: 40px;
+        background: #FFFFFF;
+    }
+
+
+    .container {
+        max-width: 1470px;
+        padding-top: 107px;
+        padding-bottom: 79px;
+
+        @media screen and (max-width: 1500px) {
+            max-width: 1200px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 1000px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 26px;
+            padding-top: 139px;
+        }
+
+        .guide-note-heading {
+            font-weight: 600;
+            font-size: 38px;
+            line-height: 35px;
+            color: #FFFFFF;
+            margin-bottom: 36px;
+
+            @media screen and (max-width: 768px) {
+
+                font-size: 20px;
+                margin-bottom: 14px;
+                color: #2D3245;
+
+            }
+        }
+
+        li {
+            display: flex;
+
+
+            &.guide-note-description {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                color: #FFFFFF;
+                margin-bottom: 25px;
+
+                @media screen and (max-width: 768px) {
+
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #2D3245;
+                    margin-bottom: 14px;
+                }
+
+
+            }
+
+            &::before {
+                content: "\2022";
+                width: 5.81px;
+                margin-right: 12px;
+                color: #A9CF3D;
+
+                font-weight: bold;
+                display: inline-block;
+
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,91 @@
+.scheduler-sidebar {
+    position: relative;
+    border-right: 1px solid #e0e0e0;
+    width: 0;
+    padding-right: 2px;
+    transition: 0.5s;
+    @media screen and (max-width: 767px) {
+        border-right: 0;
+        width: 100%;
+    }
+    &.sidebar-active {
+        width: 270px;
+        @media screen and (min-width: 1800px) {
+            width: 366px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 0;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 66px;
+            background: #fff;
+            height: calc( 100% - 66px);
+            z-index: 111;
+            overflow-y: auto;
+            padding: 0 15px ;
+            .sidebar-arrow{
+                left: 0;
+                top: 85px;
+                position: fixed;
+            }
+        }
+        .siderbar-inner {
+            opacity: 1;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            max-height: 1120px;
+            @media screen and (min-width: 1800px) {
+                padding-right: 70px;
+            }
+            @media screen and (max-width: 991px) {
+                padding-right: 15px;
+
+            }
+            @media screen and (max-width: 767px) {
+                max-height: none;
+                padding-right: 0;
+                height: auto;
+                padding-bottom: 70px;
+            }
+        }
+        .sidebar-arrow {
+            transform: rotate(180deg);
+            border-radius: 4px 0 0 4px;
+        }
+    }
+    .sidebar-arrow {
+        position: absolute;
+        left: 100%;
+        width: 15px;
+        height: 24px;
+        background: #587e85;
+        border-radius: 0px 4px 4px 0px;
+        text-align: center;
+        line-height: 22px;
+        cursor: pointer;
+        @media screen and (max-width: 767px) {
+            top: -25px;
+            left: -15px;
+        }
+    }
+    .siderbar-inner {
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        @media screen and (max-width:767px) {
+            height: 0;
+        }
+       
+    }
+}
+.reset-filter-btn{
+    display: none;
+    text-align: right;
+    @media screen and (max-width:767px) {
+       display: block;
+       margin: 15px 0;
+    }
+}

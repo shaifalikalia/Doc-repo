@@ -1,0 +1,90 @@
+.vendor-bank-details {
+    .page-title {
+   
+        margin-right: auto;
+    }
+    .bank-card {
+  
+        cursor: default;
+        margin: 30px 0px 0px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.083998);
+        border-radius: 10px;
+        padding: 70px;
+        @media screen and (max-width: 767px) {
+            padding: 20px;
+        }
+        .page-step {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #587e85;
+            margin-bottom: 30px;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+        .card-sub-title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #587e85;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.28px;
+            color: #000000;
+            margin-bottom: 30px;
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+        .card-details{
+            font-weight: 400;
+font-size: 13px;
+line-height: 13px;
+color: #79869A;
+        }
+        .field-group {
+            .c-field {
+                max-width: 420px;
+            }
+        }
+        .bank-detail-group {
+            margin-top: 40px;
+            border-top: 1px solid #dadce0;
+            padding-top: 40px;
+            .c-field {
+                max-width: 420px;
+            }
+        }
+    }
+    .btn-field {
+        margin-top: 40px;
+    }
+    label{
+        display: block;
+    }
+    .StripeElement {
+        max-width: 472px;
+    }
+}
+.vendor-setup-account {
+    .container {
+        max-width: 890px;
+    }
+    .account-setup-block .account-setup-form .btn-field{
+        margin-top: 10px;
+    }
+
+    .form-wrapper {
+        @media screen and (max-width: 767px) {
+        padding-bottom: 20px;
+    }
+    }
+    .account-setup-block{
+        padding-top: 0;
+    }
+}

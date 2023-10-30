@@ -1,0 +1,291 @@
+/*
+* Base Button Style
+*
+* The default values for the .button class
+*/
+
+#{$ubtn-namespace} {
+    color: $ubtn-font-color;
+    background-color: $ubtn-bgcolor;
+    border-color: $ubtn-bgcolor;
+    font-weight: $ubtn-font-weight;
+    font-size: $ubtn-font-size;
+    font-family: $ubtn-font-family;
+    text-decoration: none;
+    text-align: center;
+    line-height: $ubtn-height;
+    height: $ubtn-height;
+    padding: 0 30px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box; // Compass Mixins
+    @if $ubtn-use-compass {
+        @include transition-property(all);
+        @include transition-duration(0.3s);
+    }
+    @else {
+        transition-property: all;
+        transition-duration: 0.3s;
+    }
+    &:visited {
+        color: $ubtn-font-color;
+    }
+    &:focus,
+    &:hover {
+        background-color: darken($ubtn-bgcolor, 10%); 
+        text-decoration: none;
+        outline: none;
+        color: $ubtn-font-color;
+    }
+    &.active,
+    &.is-active,
+    &:active {
+       
+        text-decoration: none;
+        background-color: desaturate($ubtn-bgcolor, 10%);
+        border-color: darken($ubtn-bgcolor, 12%); //color: darken($ubtn-bgcolor, 10%);
+        color: $ubtn-font-color;
+        // Compass Mixin
+        @if $ubtn-use-compass {
+            @include transition-duration(0s);
+            @include box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.2));
+        }
+        @else {
+            transition-duration: 0s;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    }
+    /*
+* Disabled State
+*
+* The disabled state uses the class .disabled, is-disabled,
+* and the form attribute disabled="disabled".
+* The use of !important is only added because this is a state
+* that must be applied to all buttons when in a disabled state.
+*/
+    &.disabled,
+    &.is-disabled,
+    &:disabled {
+        top: 0 !important;
+        background: #EEE !important;
+        border: 1px solid #DDD !important;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !important;
+        color: #CCC !important;
+        cursor: default !important;
+        appearance: none !important; // Compass Mixin
+        @if $ubtn-use-compass {
+            @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1) !important);
+            @include opacity(0.8 !important);
+        }
+        @else {
+            box-shadow: none !important;
+            opacity: 0.8 !important;
+        }
+    }
+    &.is-readonly {
+        cursor: text;
+        pointer: none;
+        background-color: transparent !important;
+        border-color: darken($white, 20%);
+        appearance: none !important;
+        box-shadow: none !important;
+    }
+}
+
+#{$ubtn-namespace}-hover {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        border-radius: 50%;
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        -webkit-transition: all 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+        transition: all 500ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+    &:hover,
+    &:focus {
+        &:before {
+            width: 500px;
+            height: 500px;
+            background-color: darken($ubtn-bgcolor, 20%);
+        }
+    }
+    span {
+        position: relative;
+    }
+}
+
+/*
+* Base Button Tyography
+*
+*/
+
+#{$ubtn-namespace}-uppercase {
+    text-transform: uppercase;
+}
+
+#{$ubtn-namespace}-lowercase {
+    text-transform: lowercase;
+}
+
+#{$ubtn-namespace}-capitalize {
+    text-transform: capitalize;
+}
+
+#{$ubtn-namespace}-small-caps {
+    font-variant: small-caps;
+}
+
+#{$ubtn-namespace}-icon-txt-large {
+    font-size: 36px !important;
+}
+
+/*
+* Base padding
+*
+*/
+
+#{$ubtn-namespace}-width-small {
+    padding: 0 10px !important;
+}
+
+#{$ubtn-namespace}-height-medium {
+    line-height: $ubtn-height - 5;
+    height: $ubtn-height - 5;
+}
+
+#{$ubtn-namespace}-height-small {
+    line-height: $ubtn-height - 10;
+    height: $ubtn-height - 10;
+}
+
+#{$ubtn-namespace}-height-large {
+    line-height: $ubtn-height + 10;
+    height: $ubtn-height + 10;
+}
+
+#{$ubtn-namespace}-height-xlarge {
+    line-height: $ubtn-height + 20;
+    height: $ubtn-height + 20;
+}
+
+#{$ubtn-namespace}-border-height-medium {
+    line-height: ($ubtn-height - 9) !important;
+    height: $ubtn-height - 5;
+}
+
+#{$ubtn-namespace}-width-medium {
+    padding: 17px 24px !important;
+}
+
+#{$ubtn-namespace}-width-small {
+    padding: 15px 10px !important;
+}
+
+#{$ubtn-namespace}-width-large {
+    padding: 17px 35px !important;
+}
+
+#{$ubtn-namespace}-min-width {
+    min-width: 190px;
+}
+
+#{$ubtn-namespace}-min-160 {
+    min-width: 160px;
+}
+
+#{$ubtn-namespace}-min-250 {
+    min-width: 250px;
+}
+
+#{$ubtn-namespace}-min-300 {
+    min-width: 300px;
+}
+
+#{$ubtn-namespace}-min-200 {
+    min-width: 200px;
+}
+
+#{$ubtn-namespace}-min-180 {
+    min-width: 180px;
+}
+
+#{$ubtn-namespace}-min-130 {
+    min-width: 130px;
+}
+
+#{$ubtn-namespace}-min-100 {
+    min-width: 100px;
+}
+
+#{$ubtn-namespace}-font-small { 
+    font-size: 13px;
+}
+
+
+
+#{$ubtn-namespace}-font-medium {
+    font-weight: 600;
+}
+
+#{$ubtn-namespace}-font-bold {
+    font-weight: 700;
+}
+
+#{$ubtn-namespace}-shadow {
+    -webkit-box-shadow: 4px 5px 14px 0 #e4e9dd;;
+    -moz-box-shadow:4px 5px 14px 0 #e4e9dd;;
+    box-shadow: 4px 5px 14px 0 #e4e9dd;;
+}
+
+/*
+* Base Colors
+*
+* Create colors for buttons
+* (.button-primary, .button-secondary, etc.)
+*/
+
+@each $ubtn-color in $ubtn-colors {
+    $ubtn-name: nth($ubtn-color, 1);
+    $ubtn-background: nth($ubtn-color, 2);
+    $ubtn-color: nth($ubtn-color, 3); // Crete class for .button-primary
+    // and legacy flat .button-primary-flat
+    #{$ubtn-namespace}-#{$ubtn-name},
+    #{$ubtn-namespace}-#{$ubtn-name}-flat {
+        background-color: $ubtn-background;
+        border-color: $ubtn-background;
+        color: $ubtn-color;
+        &:visited {
+            color: $ubtn-color;
+        }
+        &:focus,
+        &:hover {
+            background-color: darken($ubtn-background, 10%);
+            border-color: darken($ubtn-background, 10%);
+            color: $ubtn-color;
+        }
+        &.active,
+        &.is-active,
+        &:active {
+            background-color: desaturate($ubtn-background, 10%);
+            border-color: desaturate($ubtn-background, 10%);
+            
+        }
+    }
+    #{$ubtn-namespace}-plain-hover {
+        &:focus,
+        &:hover {
+            background-color: $theme !important;
+            border-color: $theme !important;
+            color: $ubtn-color;
+        }
+    }
+}

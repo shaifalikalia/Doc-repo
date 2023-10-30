@@ -1,0 +1,132 @@
+/*
+* Border Buttons
+*
+* These buttons have no fill they only have a
+* border to define their hit target.
+*/
+#{$ubtn-namespace}-border {
+    background: none;
+    border-width: 2px;
+    border-style: solid;
+    line-height: $ubtn-height - 2;
+
+    &:hover {
+        background-color: rgba(lighten($ubtn-bgcolor, 10%), 0.9);
+    }
+
+    &.active,
+    &.is-active,
+    &:active {
+        box-shadow: none;
+        text-shadow: none;
+
+        @if $ubtn-use-compass {
+            @include transition-property(all);
+
+            @include transition-duration(0.3s);
+        }
+        @else {
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+    }
+}
+
+/*
+* Border Optional Sizes
+*
+* A slight variation in border thickness
+*/
+
+#{$ubtn-namespace}-border-thin {
+    @extend #{$ubtn-namespace}-border;
+
+    border-width: 1px;
+}
+
+#{$ubtn-namespace}-border-thick {
+    @extend #{$ubtn-namespace}-border;
+
+    border-width: 3px;
+}
+
+/*
+* Border Button Colors
+*
+* Create colors for buttons
+* (.button-primary, .button-secondary, etc.)
+*/
+#{$ubtn-namespace}-border,
+#{$ubtn-namespace}-border-thick,
+#{$ubtn-namespace}-border-thin {
+    @each $ubtn-color in $ubtn-colors {
+        $ubtn-name: nth($ubtn-color, 1);
+        $ubtn-background: nth($ubtn-color, 2);
+        $ubtn-color: nth($ubtn-color, 3);
+        $ubtn-color-namespace: $ubtn-namespace + "-" + $ubtn-name;
+
+        &#{$ubtn-color-namespace} {
+            color: $ubtn-background;
+
+            @include pos(rel, null);
+
+            //@include transition(all 1s ease);
+
+            z-index: 0;
+            overflow: hidden;
+
+            // &:after {
+            //   content: "";
+            //   @include pos(ab,50% null null 50%);
+            //   position: absolute;
+            //   height: 0;
+            //   width: 150%;
+            //   z-index: -1;
+            //   @include transition(all 0.75s ease 0s);
+            //   @include transform(translateX(-50%) translateY(-50%) rotate(25deg));
+            //   background-color: rgba(lighten($ubtn-background, 10%), .9);
+            // }
+
+            &:focus,
+            &:hover {
+                color: rgba($ubtn-color, 0.9);
+                background-color: $ubtn-background;
+
+                // background-color: rgba(lighten($ubtn-background, 10%), .9);
+                // &:after {
+                //   height: 450%;
+                // }
+           
+            }
+
+            &.active,
+            &.is-active,
+            &:active {
+                
+
+                @if $ubtn-use-compass {
+                    @include opacity(0.3);
+                }
+                @else {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    /*
+    * Border Button Size Adjustment
+    *
+    * The line-height must be adjusted to compinsate for
+    * the width of the border.
+    */
+    @each $ubtn-sizes-hash in $ubtn-sizes {
+        $ubtn-size: nth($ubtn-sizes-hash, 1);
+        $ubtn-multiplier: nth($ubtn-sizes-hash, 2);
+        $ubtn-size-namespace: #{$ubtn-namespace}-#{$ubtn-size};
+
+        &#{$ubtn-size-namespace} {
+            line-height: $ubtn-height * $ubtn-multiplier - 4;
+        }
+    }
+}

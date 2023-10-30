@@ -1,0 +1,9 @@
+.hour-rate-table{
+    tbody{
+        @media screen and (max-width:991px) {
+            td:last-child{
+                text-align: left !important;
+            }
+        }
+    }
+}

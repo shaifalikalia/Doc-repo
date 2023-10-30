@@ -1,0 +1,106 @@
+.subscriptionDataPage {
+    .subscriptionDataCard1 {
+      padding: 70px;
+      background: #FFFFFF;
+      @media screen and (max-width: 767px) {
+        padding: 20px 15px 20px 15px;
+      }
+      .top-div {
+        background: #FFBA00;
+        border-radius: 6px;
+        margin-bottom: 40px;
+        display: flex;
+        padding: 8px 22px;
+        @media screen and (max-width: 767px) {
+            padding: 9px 10px;
+            margin-bottom: 30px;
+        }
+        .top-div-logo {
+
+          width: 18.5px;
+          margin-right: 20px;
+
+          @media screen and (max-width: 767px) {
+            margin-right: 12px;
+          }
+        }
+        .top-div-para {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #000000;
+         align-items: center;
+         display: flex;
+          @media screen and (max-width: 767px) {
+            width: fit-content;
+
+          }
+        }
+      }
+      .subscriptionDataCard2 {
+        background: #F9FCEE;
+        padding: 20px 20px 0px 20px;
+        @media screen and (max-width: 767px) {
+          padding: 20px 15px 10px 15px;
+        }
+        .card-title {
+          font-weight: 600;
+          font-size: 22px;
+          color: #242F40;
+          line-height: 22px;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+            color: #102C42;
+            line-height: 19px;
+          }
+        }
+        .line {
+          margin-top: 20px;
+          border: 1px solid #E7EBD8;
+          width: 105%;
+          margin-left: -2.4%;
+        }
+        .card-interior-heading {
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 22px;
+          color: #102C42;
+          margin: 20px 0px 20px 0px;
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+        .card-col {
+          margin-bottom: 20px;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          color: #5B6B82;
+          @media screen and (max-width: 767px) {
+            &:nth-last-child(1){
+                margin-bottom: 10px;
+            }
+          }
+          .card-data {
+            padding: 0.5px 0px;
+            display: flex;
+            .check-img {
+              margin-right: 12px;
+              width: 22px;
+              @media screen and (max-width: 767px) {
+                height: 22px;
+
+              }
+            }
+            .main-data {
+              width: 431px;
+              @media screen and (max-width: 767px) {
+
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

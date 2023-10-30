@@ -1,0 +1,204 @@
+name: $(BuildDefinitionName).$(DayOfYear)$(Rev:.r)
+trigger:
+  branches:
+    include:
+      - master
+
+jobs:
+
+- job: PushToStagingContainerRegistry
+  displayName: Build and push image to staging CR
+  variables:
+    DOCKER_REGISTRY: 'mxhhstagingcr.azurecr.io'
+    IMAGE_VERSION: '1.0.$(Build.BuildId)'
+    OFFICE_BASE_URL: https://office.miraxisonline.com/api/v1
+    USER_BASE_URL: https://user.miraxisonline.com/api/v1
+    LEAVE_BASE_URL: https://leave.miraxisonline.com/api/v1
+    TIMESHEET_BASE_URL: https://timesheet.miraxisonline.com/api/v1
+    UTILITY_BASE_URL: https://utility.miraxisonline.com/api/v1
+    JOB_BASE_URL: https://job.miraxisonline.com/api/v1
+    SUBSCRIPTION_BASE_URL: https://subscription.miraxisonline.com/api/v1
+    HOLIDAY_BASE_URL: https://holiday.miraxisonline.com/api/v1
+    CMS_BASE_URL: https://cms.miraxisonline.com/api/v1
+    PATIENT_SCHEDULING_BASE_URL: https://patient-scheduling.miraxisonline.com/api/v1
+    CONTRACT_BASE_URL: https://contract.miraxisonline.com/api/v1
+    PERFORMANCE_REVIEW_BASE_URL: https://performance-review.miraxisonline.com/api/v1
+    REACT_APP_SCHEDULER_BASE_URL: https://scheduler.miraxisonline.com/api/v1
+    REACT_APP_NOTES_BASE_URL: https://note.miraxisonline.com/api/v1
+    REACT_APP_TASK_MANAGEMENT_BASE_URL: https://task-management.miraxisonline.com/api/v1
+    REACT_APP_NOTIFICATIONS_BASE_URL: https://notification.miraxisonline.com/api/v1
+    REACT_APP_TAX_MANAGEMENT_BASE_URL: https://tax.miraxisonline.com/api/v1
+    REACT_APP_VENDOR_MANAGEMENT_BASE_URL: https://vendor.miraxisonline.com/api/v1
+    AD_AUTHORITY_SUSI: https://MxHHStaging.b2clogin.com/MxHHStaging.onmicrosoft.com/B2C_1A_TRUSTFRAMEWORKBASE_SUSI
+    AD_AUTHORITY_PR: https://MxHHStaging.b2clogin.com/MxHHStaging.onmicrosoft.com/B2C_1A_PASSWORDRESET
+    AD_AUTHORITY_SU: https://MxHHStaging.b2clogin.com/MxHHStaging.onmicrosoft.com/B2C_1A_TRUSTFRAMEWORKBASE_SU
+
+    WEB_APP_CLIENT_ID: dc493998-7b11-4b35-9796-c0cd29e8dd85
+    AUTH_SCOPE: https://MxHHStaging.onmicrosoft.com/Web/userimpersonation
+    STORAGE_ACCOUNT_NAME: mxhhstagingstorageacc
+    STORAGE_CONTAINER_NAME: accountpictures
+    FIREBASE_API_KEY: $(firebaseApiKey) 
+    FIREBASE_AUTH_DOMAIN: $(firebaseAuthDomain)
+    FIREBASE_DATABASE_URL: $(firebaseDataBaseUrl)
+    FIREBASE_PROJECT_ID: $(firebaseProjectId)
+    FIREBASE_STORAGE_BUCKET: $(firebaseStorageBucket)
+    FIREBASE_MESSAGING_SENDER_ID: $(firebaseMessagingSenderId)
+    FIREBASE_APP_ID : $(firebaseAppId)
+    FIREBASE_MEASUREMENT_ID : $(firebaseMeasurementId)
+    FIREBASE_PUBLIC_KEY : $(firebasePublicKey)
+    SUPPORT_HELPDESK_BASE_URL : $(supportHelpDeskBaseUrl)
+    PROMOTION_BASE_URL : $(promotionBaseUrl)
+
+
+
+    SENDBIRD_APP_ID: $(sendbirdAppId)
+    SENDBIRD_API_TOKEN: $(sendbirdApiToken)
+    SENDBIRD_REQUEST_URL: $(sendbirdRequestUrl)
+    STRIPE_LOGIN_URL: $(stripeLoginUrl)
+    CURRENT_ENV: $(currentEnv)
+    CUSTOMER_ORDER_BASE_URL: $(customerOrderBaseUrl)
+    
+
+
+    PROMOCODES_BASE_URL: $(promocodesBaseUrl)
+    PERSONNEL_BASE_URL: $(personnelBaseUrl)
+    REACT_APP_SENTRY_URL: $(WebSentryErrorLogAPIKey)
+
+    STRIPE_SECRET_KEY: $(stripeSecretKeyStg)
+    GOOGLE_API_KEY: $(googleApiKey)
+    GOOGLE_PATIENT_ANDROID_APP_STORE_LINKPLAYSTORE_APP_LINK: https://play.google.com/store/apps/details?id=com.miraxis.healthhubpatientapp
+    PATIENT_IOS_APP_STORE_LINK: itms://itunes.apple.com/us/app/apple-store/id1614384418?mt=8
+
+
+  steps:
+  - script: az login --service-principal --username $(tfClientId) --password $(tfClientSecret) --tenant $(tenantId)
+    displayName: 'az login'
+
+  - script: az acr login --name mxhhstagingcr
+    displayName: 'az acr login'
+
+  - script: docker-compose -f docker-compose.build.yml build webui
+    displayName: 'docker-compose build'
+
+  - script: docker push mxhhstagingcr.azurecr.io/webui:1.0.$(Build.BuildId)
+    displayName: 'Push webui image'
+
+  - task: ShellScript@2
+    inputs:
+      scriptPath: ./prep_k8s_deployments.sh
+      args: stg
+    displayName: 'Prep k8s deployment files'
+
+  - task: CopyFiles@2
+    displayName: 'Copy yaml file'
+    inputs:
+      SourceFolder: './k8s/stg'
+      Contents: 'web-ui.yaml'
+      TargetFolder: '$(Build.ArtifactDevelopmentDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish yaml filr to pipeline artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactDevelopmentDirectory)'
+      ArtifactName: 'drop-stg'
+      publishLocation: 'Container'
+
+
+- job: PushToProductionContainerRegistry
+  displayName: Build and push image to prod CR
+  variables:
+    DOCKER_REGISTRY: 'mxhhprodcr.azurecr.io'
+    IMAGE_VERSION: '1.0.$(Build.BuildId)'
+    OFFICE_BASE_URL: https://office.miraxis.com/api/v1
+    USER_BASE_URL: https://user.miraxis.com/api/v1
+    LEAVE_BASE_URL: https://leave.miraxis.com/api/v1
+    TIMESHEET_BASE_URL: https://timesheet.miraxis.com/api/v1
+    UTILITY_BASE_URL: https://utility.miraxis.com/api/v1
+    JOB_BASE_URL: https://job.miraxis.com/api/v1
+    SUBSCRIPTION_BASE_URL: https://subscription.miraxis.com/api/v1
+    HOLIDAY_BASE_URL: https://holiday.miraxis.com/api/v1
+    CMS_BASE_URL: https://cms.miraxis.com/api/v1
+    PATIENT_SCHEDULING_BASE_URL: https://patient-scheduling.miraxis.com/api/v1
+    CONTRACT_BASE_URL: https://contract.miraxis.com/api/v1
+    PERFORMANCE_REVIEW_BASE_URL: https://performance-review.miraxis.com/api/v1
+    REACT_APP_SCHEDULER_BASE_URL: https://scheduler.miraxis.com/api/v1
+    REACT_APP_NOTES_BASE_URL: https://note.miraxis.com/api/v1
+    REACT_APP_TASK_MANAGEMENT_BASE_URL: https://task-management.miraxis.com/api/v1
+    REACT_APP_NOTIFICATIONS_BASE_URL: https://notification.miraxis.com/api/v1
+    REACT_APP_TAX_MANAGEMENT_BASE_URL: https://tax.miraxis.com/api/v1
+    REACT_APP_VENDOR_MANAGEMENT_BASE_URL: https://vendor.miraxis.com/api/v1
+    AD_AUTHORITY_SUSI: https://MxHHProd.b2clogin.com/MxHHProd.onmicrosoft.com/B2C_1A_TRUSTFRAMEWORKBASE_SUSI
+    AD_AUTHORITY_PR: https://MxHHProd.b2clogin.com/MxHHProd.onmicrosoft.com/B2C_1A_PASSWORDRESET
+    AD_AUTHORITY_SU: https://MxHHProd.b2clogin.com/MxHHProd.onmicrosoft.com/B2C_1A_TRUSTFRAMEWORKBASE_SU
+ 
+    WEB_APP_CLIENT_ID: 9bdcde78-0dad-4302-b907-8a097fc92140
+    AUTH_SCOPE: https://MxHHProd.onmicrosoft.com/Web/userimpersonation
+    STORAGE_ACCOUNT_NAME: mxhhprodstorageacc
+    STORAGE_CONTAINER_NAME: accountpictures
+    STRIPE_SECRET_KEY: $(stripeSecretKeyProd)
+    FIREBASE_API_KEY: $(firebaseApiKey) 
+    FIREBASE_AUTH_DOMAIN: $(firebaseAuthDomain)
+    FIREBASE_DATABASE_URL: $(firebaseDataBaseUrl)
+    FIREBASE_PROJECT_ID: $(firebaseProjectId)
+    FIREBASE_STORAGE_BUCKET: $(firebaseStorageBucket)
+    FIREBASE_MESSAGING_SENDER_ID: $(firebaseMessagingSenderId)
+    FIREBASE_APP_ID : $(firebaseAppId)
+    FIREBASE_MEASUREMENT_ID : $(firebaseMeasurementId)
+    FIREBASE_PUBLIC_KEY : $(firebasePublicKey)
+    SUPPORT_HELPDESK_BASE_URL : $(supportHelpDeskBaseUrl)
+    PROMOTION_BASE_URL : $(promotionBaseUrl)
+
+
+
+    SENDBIRD_APP_ID: $(sendbirdAppId)
+    SENDBIRD_API_TOKEN: $(sendbirdApiToken)
+    SENDBIRD_REQUEST_URL: $(sendbirdRequestUrl)
+    STRIPE_LOGIN_URL: $(stripeLoginUrl)
+
+    CURRENT_ENV: $(currentEnv)
+    CUSTOMER_ORDER_BASE_URL: $(customerOrderBaseUrl)
+
+
+    PROMOCODES_BASE_URL: $(promocodesBaseUrl)
+    PERSONNEL_BASE_URL: $(personnelBaseUrl)
+    REACT_APP_SENTRY_URL: $(WebSentryErrorLogAPIKey)
+
+    GOOGLE_API_KEY: $(googleApiKey)
+    PATIENT_ANDROID_APP_STORE_LINK: https://play.google.com/store/apps/details?id=com.miraxis.healthhubpatientapp
+    PATIENT_IOS_APP_STORE_LINK: itms://itunes.apple.com/us/app/apple-store/id1614384418?mt=8
+
+  steps:
+  - script: az login --service-principal --username $(tfClientId) --password $(tfClientSecret) --tenant $(tenantId)
+    displayName: 'az login'
+
+  - script: az acr login --name mxhhprodcr
+    displayName: 'az acr login'
+
+  - script: docker-compose -f docker-compose.build.yml build webui
+    displayName: 'docker-compose build'
+
+  - script: docker push mxhhprodcr.azurecr.io/webui:1.0.$(Build.BuildId)
+    displayName: 'Push webui image'
+
+  - task: ShellScript@2
+    inputs:
+      scriptPath: ./prep_k8s_deployments.sh
+      args: prod
+    displayName: 'Prep k8s deployment files'
+
+  - task: CopyFiles@2
+    displayName: 'Copy yaml file'
+    inputs:
+      SourceFolder: './k8s/prod'
+      Contents: 'web-ui.yaml'
+      TargetFolder: '$(Build.ArtifactDevelopmentDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish yaml filr to pipeline artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactDevelopmentDirectory)'
+      ArtifactName: 'drop-prod'
+      publishLocation: 'Container'
+
+pool:
+  vmImage: 'ubuntu-latest'

@@ -1,0 +1,28 @@
+.vendor-free-trial {
+    .page-title {
+        margin-bottom: 30px !important;
+        margin-top: 26px !important;
+
+
+        @media screen and (max-width: 767px) {
+            margin-top: 4px !important;
+
+
+        }
+    }
+
+    .aod-dc-title {
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+
+    }
+
+    .aod-dc-value {
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+
+    }
+
+}

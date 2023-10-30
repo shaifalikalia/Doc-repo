@@ -1,0 +1,69 @@
+.appoint-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 33px 0;
+    min-height: 52px;
+    .react-select-container {
+        min-width: 200px;
+        > div {
+            background: #fbfbfb;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0238199);
+            border-radius: 5px;
+            border: 0;
+            min-height: 45px;
+        }
+    }
+}
+
+.appoint-actions {
+    display: flex;
+    span {
+        margin-right: 30px;
+        white-space: nowrap;
+    }
+    button {
+        padding: 0;
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    .delete-btn {
+        color: #e76f2a;
+        text-decoration: underline;
+    }
+    .disable-btns {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    .empty-span {
+        width: 110.74px;
+    }
+}
+.cursor {
+    cursor: pointer;
+}
+
+.disable-cursor {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/*Modal CSS*/
+
+.delete-appointment-modal-dialog{
+    max-width: 660px;
+    button{
+        min-width: 220px;
+        @media screen and (max-width:767px) {
+            min-width: auto;
+            margin-bottom: 20px;
+        }
+    }
+}

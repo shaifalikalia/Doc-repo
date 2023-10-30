@@ -1,0 +1,174 @@
+.vendor-subscription {
+ 
+
+    .vendor-subscription-btn {
+        margin-top: 40px;
+
+        @media (max-width: 767px) {
+            margin-top: 28px;
+        }
+
+        button {
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}
+
+.manage-vendor-card {
+
+    .credit-card-details {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: #6F7788;
+
+        @media (max-width: 767px) {
+            margin-bottom: 17px;
+        }
+    }
+
+    .card-type {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        color: #102C42;
+    }
+
+    .change-card {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        text-decoration-line: underline;
+        color: #587E85;
+        float: right;
+
+        @media (max-width: 767px) {
+            float: left;
+            margin-top: 14px;
+        }
+    }
+}
+
+.change-subsciption {
+
+
+    .plan-type-list {
+        margin-top: 30px;
+
+        @media (max-width: 767px) {
+            margin-top: 25px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .data-box {
+            padding: 60px 38px 30px 38px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            h3 {
+                font-size: 22px;
+                color: #242F40;
+                font-weight: 600;
+                line-height: 22px;
+                margin: 20px 0 0 0;
+
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 28px;
+                text-align: center;
+                color: #587E85;
+                margin: 40px 0px 27px;
+
+                @media (max-width: 767px) {
+                    margin: 30px 0px;
+                    line-height: 24px;
+                    font-size: 16px;
+                }
+
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                color: #5B6B82;
+                margin-bottom: 59px;
+
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            button {
+
+                @media (max-width: 767px) {
+                    min-width: 249px;
+
+                }
+            }
+
+            .dollar-sign{
+                font-weight: 400;
+                font-size: 30px;
+                color: #111B45
+            }
+
+            .professional-subscription-amount{
+                font-weight: 600;
+                font-size: 45px;
+               
+                color: #242F40;
+               
+
+            }
+
+            .professional-subscription-amount-per-month{
+                font-weight: 400;
+                font-size: 22px;
+                color: #8F9BB2;
+            }
+
+            .vendor-charges{
+                display:flex;
+                gap:13px;
+                margin-top: 19.5px;
+            }
+            .sales-rep{
+                display:flex;
+                gap:13px;
+                margin-top: 18px;
+                margin-bottom: 28px;
+            }
+
+            .dollar-amount-month{
+                margin-top:23px;
+            }
+
+        }
+    }
+}

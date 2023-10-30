@@ -1,0 +1,95 @@
+.search {
+    min-width: 317px;
+    @media screen and (max-width: 767px) {
+        min-width: 100%;
+        margin-bottom: 15px;
+        input {
+            min-height: 50px;
+        }
+    }
+}
+
+.vendor-card {
+    padding: 30px 30px 5px !important;
+    @media screen and (max-width: 767px) {
+        padding: 20px 20px 1px !important;
+    }
+    .edit-btn {
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            right: 20px;
+            top: 0px;
+            z-index: 2;
+        }
+    }
+}
+.customer-detail-card {
+    .export-btn-group {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        text-align: right;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            margin-top: 60px;
+            button {
+                width: 100%;
+            }
+        }
+    }
+    table {
+        th {
+            vertical-align: middle;
+            &:first-child {
+                label {
+                    margin-top: 3px;
+                    span {
+                        color: #102c42;
+                        font-size: 12px;
+                        &::before {
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        td {
+            &:first-child {
+                label {cursor: pointer;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.edit-customer-modal {
+    .switch-box {
+        display: flex;
+        align-items: center;
+    }
+    .edit-list {
+        margin-bottom: 25px;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 0;
+            border-bottom: #dadce0 1px solid;
+            p{
+                font-size: 14px;
+            }
+            .switch-box{
+                p{
+                font-size: 13px;
+                }
+            }
+        }
+    }
+}
+.sub-title{
+    color: #000;
+    margin: -15px 0 30px;
+    font-size: 14px;
+    font-weight: 300;
+}

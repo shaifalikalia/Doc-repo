@@ -1,0 +1,62 @@
+.add-category {
+    a {
+        line-height: 1.4;
+    }
+}
+
+.category-table {
+    .data-table-block {
+        .data-table-container {
+            .table {
+                tbody {
+                    tr {
+                        td {
+                            &:first-child {
+                                font-weight: 400;
+                                color: #535b5f;
+                                width: 45%;
+                            }
+
+                            &:nth-child(2) {
+
+                                width: 35%;
+                            }
+
+                            &:nth-child(3) {
+                                .pointer {
+                                    margin-left: 80px;
+                                    font-weight: 500;
+                                }
+
+                                span {
+                                    font-size: 12px;
+
+
+                                    &:hover {
+                                        color: #a9cf3d;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagnation-block {
+            margin-top: 80px;
+        }
+    }
+}
+
+.category-modal {
+    .modal-content {
+        .modal-body {
+            .last-field {
+                padding-top: 10px;
+            }
+        }
+    }
+}

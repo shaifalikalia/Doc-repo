@@ -1,0 +1,17 @@
+/*bootstrap*/
+@import "./bootstrap/scss/bootstrap";
+@import "./base";
+
+// @import "./fonts";
+
+//@import "./helpers/normalize";
+@import "./helpers/globle";
+@import "./buttons/buttons";
+@import "./utility/utility";
+@import "./comman/comman";
+@import "./header/header";
+@import "./footer/footer";
+@import "./variables";
+
+
+@import "./pages";

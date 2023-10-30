@@ -1,0 +1,164 @@
+.terminate-modal {
+    &.modal-dialog {
+
+
+        .modal-content {
+            padding: 70px 30px 40px;
+            text-align: center;
+
+            @media screen and (max-width:767px) {
+                padding: 50px 20px 16px
+            }
+
+            .modal-body {
+                p:nth-child(1) {
+                    line-height: 25px;
+                    margin-bottom: 11px;
+
+                    @media screen and (max-width:767px) {
+                        line-height: 24px;
+                        font-size: 20px;
+                        margin-bottom: 14px;
+                    }
+
+                }
+
+                p:nth-child(2) {
+                    line-height: 24px;
+                    margin-bottom: 40px;
+
+                    @media screen and (max-width:767px) {
+                        line-height: 20px;
+                        margin-bottom: 30px;
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+
+                }
+
+                .heading {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #6F7788;
+                    margin-left: 12px;
+                    margin-bottom: 4px;
+
+                }
+
+                .information {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #102C42;
+                    margin-left: 12px;
+
+                }
+
+                .image-container1 {
+                    padding-left: 27px;
+
+                    @media screen and (max-width:767px) {
+                        padding-left: 0px;
+                        margin-bottom: 30px;
+                    }
+
+                }
+
+                .image-container2 {
+                    padding-left: 56px;
+
+                    @media screen and (max-width:767px) {
+                        padding-left: 0px;
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
+    .btn-box {
+
+        justify-content: center;
+
+        .button {
+            min-width: 442px;
+
+            @media screen and (max-width:767px) {
+                min-width: 240px;
+                width: 100%;
+            }
+
+            &.sure-btn {
+                margin-bottom: 25px;
+
+                @media screen and (max-width:767px) {
+                    margin-bottom: 16px;
+
+                }
+                @media screen and (max-width:374px) {
+                    border-radius: 100px;
+
+                }
+            }
+
+            &.contact-btn {
+                min-width: 222px;
+                margin-top: 40px;
+
+                @media screen and (max-width:767px) {
+                    margin-top: 16px;
+
+                }
+            }
+
+        }
+    }
+}
+
+.vendor-card-custom {
+    .app-card-body {
+        @media screen and (max-width:767px) {
+            padding: 20px;
+        }
+    }
+}
+
+.vendor-subscription-custom {
+
+    .app-card-body {
+        @media screen and (max-width:767px) {
+            padding: 20px 20px 30px;
+        }
+    }
+
+    .aod-dc-head-custom {
+        margin-bottom: 50px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 35px;
+        }
+
+    }
+
+    .vendor-subscription-custom-hr {
+        @media screen and (max-width:767px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .page-title {
+        margin-bottom: 30px !important;
+        margin-top: 26px !important;
+
+
+        @media screen and (max-width: 767px) {
+            margin-top: 4px !important;
+
+
+        }
+    }
+
+}

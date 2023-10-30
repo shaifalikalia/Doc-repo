@@ -1,0 +1,17 @@
+.find-doctor-page{
+    padding-top: 30px;
+    margin-bottom: 100px;;
+    @media screen and (max-width:767px){
+        margin-bottom: 20px;
+        padding-top: 0;
+    }
+    .sub-heading{
+        font-size: 14px;
+        font-weight: 300;
+        color: #000;
+        margin-bottom: 30px;
+    }
+    .find-doctor-form{
+        max-width: 420px;
+    }
+}

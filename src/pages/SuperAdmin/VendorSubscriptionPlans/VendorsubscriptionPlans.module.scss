@@ -1,0 +1,38 @@
+.vendor-subscription-plans {
+    
+
+    
+
+    .plan-type-list {
+       margin-top: 30px;
+
+        @media (max-width: 767px) {
+           margin-top: 25px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .data-box {
+           padding: 59px 0 ;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+
+            h3 {
+               font-size: 22px;
+                color: #242F40;
+                font-weight: 600;
+                line-height: 22px;
+                margin: 20px 0 0;
+            }
+        }
+    }
+}

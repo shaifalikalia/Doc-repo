@@ -1,0 +1,86 @@
+
+.enterprise-subscription {
+    .data-table-block {
+        .data-table-container {
+            .table {
+                tbody {
+                    tr {
+                        td {
+
+
+                            &:first-child {
+                                text-decoration: underline;
+                                width: 30%;
+                              
+                            }
+
+                            &:nth-child(2) {
+
+                                width: 35%;
+
+                            }
+
+                            &:nth-child(3) {
+
+                                width: 26.5%;
+
+                            }
+
+                            &:nth-child(4) {
+
+                                width: 9.5%;
+
+                            }
+
+                            span {
+                                font-size: 12px;
+
+
+
+                            }
+
+
+                        }
+
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .pagnation-block {
+            margin-top: 80px;
+
+        }
+
+    }
+    &.enterprise-subscription-details{
+        .data-table-block {
+            .data-table-container {
+                .table {
+                    tbody {
+                        tr {
+                            td {
+    
+    
+                                &:first-child {
+                                    text-decoration: none;
+                                   
+                                }
+    
+                                &:nth-child(2) {
+    
+                                    width: 59%;
+    
+                                }}}}}}}
+
+    }
+}
+
+.addNewVendor{
+    margin-bottom: 30px;
+}

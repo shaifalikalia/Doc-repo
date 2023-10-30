@@ -1,0 +1,61 @@
+.pricing-main-wrapper {
+    padding-bottom: 100px;
+    @media (max-width: 767px) {
+        padding-bottom: 25px;
+    }
+    .pricing-description {
+        font-size: 20px;
+        color: #2d3245;
+        font-weight: 400;
+        line-height: 2;
+        max-width: 1010px;
+        margin: -300px auto 0;
+        @media (max-width: 991px) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+.features-pricing {
+    padding-top: 5px;
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+    .plan-list-section {
+        background: transparent;
+        padding: 0;
+        .container > h2 {
+            display: none;
+        }
+        .plan-list {
+            max-width: 950px;
+            @media (max-width: 767px) {
+                margin-top: 0;
+              }
+        }
+        .plan-block{
+            max-width: 460px;
+            margin: 0 auto 16px;
+            min-height: auto;
+            @media (max-width: 767px) {
+                margin-top: 130px;
+              }
+
+            .button_block .button {
+               line-height: 1.4;
+               padding: 17px 30px;
+               
+            }
+        }
+    }
+    &.contact-sales-pricing{
+        .plan-list-section .plan-block{
+            max-width: 705px;
+        }
+    }
+}

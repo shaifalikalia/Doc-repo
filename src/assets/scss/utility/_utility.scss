@@ -1,0 +1,744 @@
+
+/*! 
+*********
+license
+
+utility help css classes
+****************
+*/
+
+.br {
+    display: block;
+}
+
+.ibv {
+    display: $ib;
+    vertical-align: middle;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.t_u {
+    text-decoration: underline;
+}
+
+.p-none {
+    pointer-events: none;
+}
+
+.color-black {
+    color: $black !important;
+}
+
+.color-theme {
+    color: $theme !important;
+}
+
+
+.flow-hidden {
+    overflow: hidden;
+}
+
+.fw400 {
+    @include font-weight(normal);
+}
+
+.fw700 {
+    @include font-weight(bold);
+}
+
+
+// Margin
+@include maring-and-padding-spacing($spacing);
+
+.margin-1x {
+    @extend %margin-1x;
+}
+
+.margin-left-1x {
+    @extend %margin-left-1x;
+}
+
+.margin-left-2x {
+    @extend %margin-left-2x;
+}
+
+.margin-left-3x {
+    @extend %margin-left-3x;
+}
+
+.margin-left-4x {
+    @extend %margin-left-4x;
+}
+
+.margin-left-6x {
+    @extend %margin-left-6x;
+}
+
+.margin-right-1x {
+    @extend %margin-right-1x;
+}
+
+.margin-right-2x {
+    @extend %margin-right-2x;
+}
+
+.margin-right-3x {
+    @extend %margin-right-3x;
+}
+
+.margin-right-4x {
+    @extend %margin-right-4x;
+}
+
+.margin-right-6x {
+    @extend %margin-right-6x;
+}
+
+.margin-right-8x {
+    @extend %margin-right-8x;
+}
+
+.margin-top-1x {
+    @extend %margin-top-1x;
+}
+
+.margin-top-2x {
+    @extend %margin-top-2x;
+}
+
+.margin-top-3x {
+    @extend %margin-top-3x;
+}
+
+.margin-top-4x {
+    @extend %margin-top-4x;
+}
+
+.margin-top-6x {
+    @extend %margin-top-6x;
+}
+
+.margin-top-7x {
+    @extend %margin-top-7x;
+}
+
+.margin-top-8x {
+    @extend %margin-top-8x;
+}
+
+.margin-top-10x {
+    @extend %margin-top-10x;
+}
+
+.margin-bottom-1x {
+    @extend %margin-bottom-1x;
+}
+
+.margin-bottom-2x {
+    @extend %margin-bottom-2x;
+}
+
+.margin-bottom-3x {
+    @extend %margin-bottom-3x;
+}
+
+.margin-bottom-4x {
+    @extend %margin-bottom-4x;
+}
+
+.margin-bottom-6x {
+    @extend %margin-bottom-6x;
+}
+
+.margin-bottom-8x {
+    @extend %margin-bottom-8x;
+}
+
+.margin-bottom-10x {
+    @extend %margin-bottom-10x;
+}
+
+.margin-bottom-12x {
+    @extend %margin-bottom-12x;
+}
+
+.margin-bottom-14x {
+    @extend %margin-bottom-14x;
+}
+
+.margin-bottom-0 {
+    @include margin-bottom(0);
+}
+
+// PADDING
+
+.padding-1x {
+    @extend %padding-1x;
+}
+
+.padding-2x {
+    @extend %padding-2x;
+}
+
+.padding-4x {
+    @extend %padding-4x;
+}
+
+.padding-left-1x {
+    @extend %padding-left-1x;
+}
+
+.padding-left-2x {
+    @extend %padding-left-2x;
+}
+
+.padding-left-3x {
+    @extend %padding-left-3x;
+}
+
+.padding-left-4x {
+    @extend %padding-left-4x;
+}
+
+.padding-right-1x {
+    @extend %padding-right-1x;
+}
+
+.padding-right-2x {
+    @extend %padding-right-2x;
+}
+
+.padding-right-3x {
+    @extend %padding-right-3x;
+}
+
+.padding-right-4x {
+    @extend %padding-right-4x;
+}
+
+.padding-top-1x {
+    @extend %padding-top-1x;
+}
+
+.padding-top-2x {
+    @extend %padding-top-2x;
+}
+
+.padding-top-3x {
+    @extend %padding-top-3x;
+}
+
+.padding-top-4x {
+    @extend %padding-top-4x;
+}
+
+.padding-top-6x {
+    @extend %padding-top-6x;
+}
+
+.padding-top-7x {
+    @extend %padding-top-7x;
+}
+
+.padding-top-8x {
+    @extend %padding-top-8x;
+}
+
+.padding-top-10x {
+    @extend %padding-top-10x;
+}
+
+.padding-top-12x {
+    @extend %padding-top-12x;
+}
+
+.padding-bottom-1x {
+    @extend %padding-bottom-1x;
+}
+
+.padding-bottom-2x {
+    @extend %padding-bottom-2x;
+}
+
+.padding-bottom-3x {
+    @extend %padding-bottom-3x;
+}
+
+.padding-bottom-4x {
+    @extend %padding-bottom-4x;
+}
+
+.padding-bottom-6x {
+    @extend %padding-bottom-6x;
+}
+
+.padding-bottom-8x {
+    @extend %padding-bottom-8x;
+}
+
+.padding-bottom-10x {
+    @extend %padding-bottom-10x;
+}
+
+// Position
+
+.p-t2 {
+    @include pos(r, 2px null null);
+}
+
+.p-t4 {
+    @include pos(r, 4px null null);
+}
+
+//CheckBox Custome
+
+.ch-checkbox {
+    display:block;
+    overflow: hidden;
+    cursor: pointer;
+    color: $font-color;
+
+    @include pos(r, null);
+
+    @include transition(all 0.4s);
+
+    & * {
+        @include transition(all 0.4s);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        @include pos(ab, 0 null null 0);
+        @include opacity(0);
+
+        &:checked {
+            & + span,
+            & ~ span {
+                color:#274642;
+                &::after {
+                    content: "\e901";
+                    font-family: 'icomoon' !important;
+                    @include pos(ab, 4px null null 5px);
+                    color:#587e85;
+                    @include fontsize(8);
+                }
+            }
+        }
+    }
+
+    span {
+        display: $b;
+        overflow: hidden;
+        @include pos(r, null);
+        color: #6f7788;
+        @include padding-left(30);
+        @include fontsize(14);
+        font-weight:600;
+   
+        &:before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            border: solid 2px #587e85;
+            @include pos(ab, 0 null null 1px);
+            @include transition(inherit);
+        }
+    }
+}
+.ch-checkbox-color {
+    display:block;
+    overflow: hidden;
+    cursor: pointer;
+    color: $font-color;
+
+    @include pos(r, null);
+
+    @include transition(all 0.4s);
+
+    & * {
+        @include transition(all 0.4s);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        @include pos(ab, 0 null null 0);
+        @include opacity(0);
+
+        &:checked {
+            & + span,
+            & ~ span {
+                color: #587E85;
+                &::after {
+                    content: "\e901";
+                    font-family: 'icomoon' !important;
+                    @include pos(ab, 4px null null 5px);
+                    color:#587e85;
+                    @include fontsize(8);
+                }
+            }
+        }
+    }
+
+    span {
+        display: $b;
+        overflow: hidden;
+        @include pos(r, null);
+        color: #6f7788;
+        @include padding-left(30);
+        @include fontsize(14);
+        font-weight:600;
+   
+        &:before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            border: solid 2px #587e85;
+            @include pos(ab, 0 null null 1px);
+            @include transition(inherit);
+        }
+    }
+}
+
+//Custom Radio Button
+
+.ch-radio {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 400;
+   line-height: 1;
+    @include pos(r, null);
+
+    @include fontsize(16);
+
+    @include transition(all 0.4s);
+
+    & * {
+        @include transition(all 0.4s);
+    }
+
+    label 
+    {
+        margin: 0;
+        @include fontsize(14);
+        font-weight:600;
+       
+    }
+
+    input[type="radio"] {
+        @include pos(ab, 0 null null 0);
+
+        @include opacity(0);
+
+        &:checked {
+            & + span,
+            & ~ span {
+                color:#274642;
+                &:before {
+                  border-color:#274642;
+                }
+
+                &:after {
+                    @include scale(1);
+
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+
+    span {
+        display: $b;
+        overflow: hidden;
+        min-height: 18px;
+        line-height: 19px;
+        color:#6f7788;
+        @include pos(r, null);
+
+        @include padding-left(28);
+
+        &:after,
+        &:before {
+            content: "";
+            border: 2px solid #DDE3EB;
+
+            @include pos(ab, 0 null null 1px);
+
+            @include transition(inherit);
+
+            @include square(18px);
+
+            @include radius(50%);
+        }
+
+        &:after {
+            background-color: #274642;
+            top: 5px;
+            left: 6px;
+            border: 0;
+
+            @include square(8px);
+
+            @include scale(0);
+
+            @include opacity(0);
+        }
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    &.sm-ch {
+        span {
+            min-height: 19px;
+            line-height: 19px;
+            padding-left: 25px;
+
+            &:before {
+                @include square(18px);
+            }
+
+            &::after {
+                @include square(8px);
+
+                top: 6px;
+                left: 6px;
+            }
+        }
+    }
+
+    &.ch-border-grey {
+        span {
+            &:before {
+                border-color: darken($white, 35%);
+            }
+        }
+    }
+
+    &.ch-green {
+        input[type="radio"] {
+            &:checked {
+                & + span,
+                & ~ span {
+                    &:before {
+                        border-color: #00a651;
+                    }
+
+                    &:after {
+                        @include scale(1);
+
+                        background-color: #00a651;
+
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &.ch-yellow {
+        input[type="radio"] {
+            &:checked {
+                & + span,
+                & ~ span {
+                    &:before {
+                        border-color: #ffc20e;
+                    }
+
+                    &:after {
+                        @include scale(1);
+
+                        background-color: #ffc20e;
+
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &.ch-red {
+        input[type="radio"] {
+            &:checked {
+                & + span,
+                & ~ span {
+                    &:before {
+                        border-color: #d71920;
+                    }
+
+                    &:after {
+                        @include scale(1);
+
+                        background-color: #d71920;
+
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Custome Switch button
+
+.ch-switch {
+    @include pos(r, null);
+
+    cursor: pointer;
+
+    & *,
+    & *:after,
+    & *:before {
+        @include transition(all 0.4s);
+    }
+
+    input[type="checkbox"] {
+        @include pos(ab, 0 null null 0);
+
+        @include opacity(0);
+
+        &:checked {
+            & + span,
+            & ~ span {
+                background-color: $theme;
+                &:after {
+                    left: 27px;
+                   
+                }
+            }
+        }
+    }
+
+    label 
+    {
+        margin:0;
+        padding:0;
+    }
+
+    span {
+        display: $ib;
+        width: 45px;
+        height: 20px;
+        cursor: pointer;
+        background-color: #dae1e9;
+
+        @include pos(r, null);
+
+        @include radius(10px);
+
+        &:after {
+            content: "";
+
+            @include pos(ab, 2px null null 2px);
+            @include radius(50%);
+            @include square(16px);
+
+            background-color: $white;
+            z-index: 1;
+        }
+    }
+}
+
+// Custom Upload Button
+
+.ch-upload-button {
+    @include pos(r, null);
+
+    input[type="file"] {
+        @include pos(ab, 0 null null 0);
+
+        @include square(100%);
+
+        @include opacity(0);
+
+        cursor: pointer;
+    }
+
+    span {
+        cursor: pointer;
+    }
+}
+
+.gutters-3 {
+    @include margin-left(-3);
+
+    @include margin-right(-3);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(3);
+
+        @include padding-right(3);
+    }
+}
+
+.gutters-5 {
+    @include margin-left(-5);
+
+    @include margin-right(-5);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(5);
+
+        @include padding-right(5);
+    }
+}
+
+.gutters-7 {
+    @include margin-left(-7);
+
+    @include margin-right(-7);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(7);
+
+        @include padding-right(7);
+    }
+}
+
+.gutters-10 {
+    @include margin-left(-10);
+
+    @include margin-right(-10);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(10);
+
+        @include padding-right(10);
+    }
+}
+
+.gutters-14 {
+    @include margin-left(-14);
+
+    @include margin-right(-14);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(14);
+
+        @include padding-right(14);
+    }
+}
+
+.gutters-12 {
+    @include margin-left(-12);
+
+    @include margin-right(-12);
+
+    & > .col,
+    & > [class*="col-"] {
+        @include padding-left(12);
+
+        @include padding-right(12);
+    }
+}

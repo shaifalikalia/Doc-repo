@@ -1,0 +1,55 @@
+
+.rejection-modal-dialog{
+    max-width: 660px;
+    textarea{
+        resize: none;
+        min-height: 100px;
+    }
+}
+.repeat-event-modal-dialog{
+    ul{
+        margin-bottom: 30px;
+        li{
+            padding: 10px 0;
+            border-bottom:  1px solid #DADCE0;
+            &:last-child{
+                border:0
+            }
+        }
+    }
+}
+.confirem-accept-modal-dialog{
+    button{
+        min-width: 220px;
+        margin-bottom: 10px;
+        @media screen and (max-width:767px){
+            min-width: auto;
+        }
+       
+    }
+    .desc-text{
+        max-width: 450px;
+        margin: 0 auto 40px;
+        @media screen and (max-width:767px){
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+.change-schedule-modal-dialog{
+    .change-list{
+        margin-bottom: 40px;
+        max-height: 35vh;
+        overflow-y: auto;
+        @media screen and (max-width:767px){
+            margin-bottom:30px
+        }
+        li{
+            padding: 16px 0 12px;
+            border-bottom: solid 1px rgb(218, 220, 224); 
+            label{
+                margin: 0;
+            }     
+        }
+    }
+}

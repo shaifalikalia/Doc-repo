@@ -1,0 +1,33 @@
+/*Modal CSS*/
+
+.custom-modal-dialog{
+  max-width: 660px;
+  button{
+      min-width: 220px;
+      @media screen and (max-width:767px) {
+          min-width: auto;
+          margin-bottom: 20px;
+      }
+  }
+  .calender-modal {
+    div {
+      ol {
+          list-style: numeric;
+          padding-left: 40px;
+          margin-bottom: 16px;
+      }
+    }
+    .sync-link-div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #F9FCEE;
+      padding: 10px;
+      margin-bottom: 24px;
+      span {
+        word-break: break-word;
+        margin-right: 5px;
+      }
+    }
+  }
+}

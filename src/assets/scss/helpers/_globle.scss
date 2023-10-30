@@ -1,0 +1,111 @@
+/*==================================== GLOBLE CSS ====================================*/
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: $font;
+    color: $font-color;
+    font-weight: 400;
+    background-color: #f2f3ef;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: $lineheight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-stroke: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden; // @include transition(all 500ms ease-in-out);
+}
+
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    @include anchor;
+    @include transition($trasition_all);
+    color: $font-color;
+    text-decoration: underline;
+    outline: none !important;
+    &:hover {
+        color: $theme;
+        text-decoration: underline;
+    }
+    &:focus {
+        outline: none !important;
+    }
+}
+
+input[type="file"] {
+    cursor: pointer;
+    &::-webkit-file-upload-button {
+        cursor: pointer;
+    }
+}
+
+.select-control {
+    @include pos(rel, null);
+
+    z-index: 0;
+    &:after {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-variant: normal;
+        @include pos(ab, 12px 0 null null);
+        color: #102c42;
+        content: "\e900";
+       // @include transform(translate(0, -50%));
+        @include fontsize(6);
+    }
+    select {
+        @include appearance(none); // @include bg-norepeat("#{$url}icons/down-arrow.png", transparent, no-repeat, right 20px center, 12px);
+        outline: 0px !important;
+        padding-right: 35px !important;
+        text-overflow: ellipsis;
+        background: transparent;
+        &::-ms-expand {
+            display: none;
+        }
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+    }
+    &.select-o-control {
+        &:after {
+            content: "\e90a";
+        }
+    }
+    &.help-ico {
+        .ico {
+            @include pos(ab, 50% 0 null null);
+            color: #c3c3c3;
+            @include transform(translate(0, -50%));
+        }
+        &:after {
+            right: 20px;
+        }
+    }
+}
+
+button,
+input {
+    &[type="button"],
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}

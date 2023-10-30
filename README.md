@@ -1,0 +1,34 @@
+# HealthHub Web
+Frontend for HealthHub's SuperAdmin, Account Owner roles.
+
+## How to run
+To run project locally you will need to define a .env file at the root of the project with following keys.
+
+```
+# Microservices base urls
+REACT_APP_OFFICE_BASE_URL
+REACT_APP_USER_BASE_URL
+REACT_APP_LEAVE_BASE_URL
+REACT_APP_TIMESHEET_BASE_URL
+REACT_APP_UTILITY_BASE_URL
+REACT_APP_JOB_BASE_URL
+REACT_APP_SUBSCRIPTION_BASE_URL
+REACT_APP_HOLIDAY_BASE_URL
+REACT_APP_CMS_BASE_URL
+REACT_APP_LEAVE_BASE_URL
+
+
+# Custom policy related keys
+REACT_APP_AZURE_AD_AUTHORITY
+REACT_APP_AZURE_AD_AUTHORITY_RESET
+REACT_APP_AZURE_AD_AUTHORITY_SIGNUP
+REACT_APP_AZURE_APP_CLIENT_ID
+REACT_APP_AZURE_APP_SCOPES
+
+# Azure storage account name and container name
+REACT_APP_AZURE_STORAGE_ACCOUNT
+REACT_APP_AZURE_STORAGE_CONTAINER
+
+# Stripe's secret key
+REACT_APP_STRIPE_KEY
+```

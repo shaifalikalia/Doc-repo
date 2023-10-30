@@ -1,0 +1,13 @@
+.order-detail-tab{
+   
+    .data-table-block .data-table-container .table tbody tr td{
+        font-weight: 400 !important;
+    &:first-child{
+        color:#535B5F;
+    }
+}
+}
+.cancelled-table .data-table-block .data-table-container .table tbody tr td:first-child{
+    font-weight: 400;
+  color: #535B5F;
+}

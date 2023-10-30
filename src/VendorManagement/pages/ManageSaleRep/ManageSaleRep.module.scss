@@ -1,0 +1,138 @@
+.search {
+    min-width: 320px;
+    input{
+        padding: 15px 15px 15px 41px;
+    }
+    @media screen and (max-width:767px){
+        min-width: auto;
+        padding-bottom: 14px;
+    }
+}
+.vendor-card {
+    padding: 30px 30px 5px !important;
+    @media screen and (max-width:767px){
+       padding: 20px 20px 1px !important;
+    }
+}
+.empty-list {
+    padding-top: 100px 0 ;
+    max-width: 500px;
+    margin: 0 auto;
+    @media screen and (max-width:767px){
+        img{
+            max-width: 140px;
+        }
+        h4{
+            font-size: 13px;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+.sales-rep-detail-card {
+    table{
+        th:last-child,
+        td:last-child{
+            text-align: center;
+            @media screen and (max-width:767px){
+               text-align: left;
+              }
+        }
+    }
+    .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+         @media screen and (max-width:767px){
+              margin-bottom: 28px;
+              }
+        .switch-box {
+            display: flex;
+            align-items: center;
+            border-right: 1px solid #dadce0;
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+    }
+    .search-assign-office {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0 30px;
+        @media screen and (max-width:767px){
+          margin: 30px 0 ;
+          display: block;
+        }
+        .search {
+            min-width: 320px;
+            @media screen and (max-width:767px){
+                min-width: 100%;
+                margin-bottom: 15px;
+                input{
+                    min-height: 50px;
+                }
+            }
+        }
+    }
+    .empty-office {
+        padding: 20px 0 0;
+        max-width: 500px;
+        margin: 0 auto;
+        &.custom-empty-office{
+            max-width: 552px;
+            
+
+                h4{
+                    margin-bottom: 12px;
+                    @media screen and (max-width:767px){
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        
+        @media screen and (max-width:767px){
+            img{
+                max-width: 140px;
+            }
+            h4{
+                font-size: 13px;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.select-office-modal {
+    >div{
+        padding-bottom: 20px !important;
+    }
+    .select-search {
+        width: 100%;
+        margin-bottom: 30px;
+        @media screen and (max-width:767px){
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        input {
+            border: 1px solid #dadada;
+            border-radius: 5px;
+            padding: 15px 15px 15px 41px;
+        }
+    }
+    .customer-list{
+        margin-bottom: 40px;
+        max-height: 300px;
+        overflow-y: auto;
+        @media screen and (max-width:767px){
+            margin-bottom: 30px;
+        
+        }
+        li{
+            border-bottom: 0.6px solid #DADCE0;
+            label{
+                padding: 15px 0;
+                margin: 0;
+            }
+        }
+    }
+}

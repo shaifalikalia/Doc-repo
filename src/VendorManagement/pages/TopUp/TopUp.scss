@@ -1,0 +1,65 @@
+.vendor-layout {
+    .topup-table-list {
+        .data-table-block .pagnation-block {
+            @media screen and (max-width: 767px) {
+
+                margin-top: 10px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+#payment-form {
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    .StripeElement {
+        height: auto;
+    }
+}
+
+.stripe-card-modal{
+    .modal-dialog{
+        max-width: 660px;
+        .modal-content{
+            padding:50px 30px 30px;
+            @media screen and (max-width: 767px) {
+                padding-bottom: 40px;
+            }
+            input{
+                cursor: pointer;
+            }
+            .card_type{
+                cursor: pointer;
+            }
+
+    .add-new-card{
+        font-weight: 500;
+font-size: 12px;
+line-height: 22px;
+/* identical to box height, or 183% */
+
+text-decoration-line: underline;
+cursor: pointer;
+
+color: #587E85;
+
+    }
+    .footer{
+        margin-top: 40px;
+        .footer-contain{
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                margin-top: 24px;
+            }
+        }
+        button{
+            @media screen and (max-width: 767px) {
+
+            width: 100%;
+            }
+        }
+    }}
+
+}}

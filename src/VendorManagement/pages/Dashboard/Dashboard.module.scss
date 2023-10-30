@@ -1,0 +1,268 @@
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .heading-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #111b45;
+        margin-bottom: 30px;
+        @media screen and (max-width: 767px) {
+            order: 2;
+            margin-bottom: 20px;
+          font-weight: 600;
+          font-size:15px;
+        }
+    }
+    .calendar-box {
+        display: flex;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            justify-content: space-between;
+            order: 1;
+        }
+        > div {
+            margin-left: 20px;
+            @media screen and (max-width: 767px) {
+                margin-left: 0;
+                width: calc(50% - 15px);
+            }
+            input {
+                background-color: transparent;
+            }
+        }
+    }
+}
+.dashboard-card {
+    padding: 30px 20px !important;
+    display: flex;
+    margin-bottom: 30px !important;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 10px !important;
+    }
+    .col-left {
+        width: 60%;
+    }
+    .img-col {
+        width: 40%;
+        .icon-box {
+            border: 1px solid #e5e7df;
+            width: 60px;
+            height: 60px;
+            line-height: 58px;
+            text-align: center;
+            border-radius: 100%;
+            margin-left: auto;
+            display: block;
+        }
+    }
+    .card-heading {
+        font-size: 12px;
+        color: #79869a;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        max-width: 70px;
+        &.width-heading {
+            max-width: 110px;
+        }
+    }
+    .card-heading-two{
+        max-width: 200px;
+        font-size: 12px;
+        color: #79869a;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 15px;  
+        &.width-heading {
+            max-width: 110px;
+        }  
+    }
+ 
+    .card-count {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #111b45;
+    }
+}
+.sub-title{
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.28px;
+
+    color: #000000;
+
+}
+.vendor-profile-card {
+    padding: 30px !important;
+    margin-top: 30px;
+    word-break: break-all;
+    &.view-detail{
+        padding: 70px !important;
+        @media screen and (max-width: 767px) {
+            padding: 0px 18px 20px 18px !important;
+        }
+        .profile-image-col{
+            @media screen and (max-width: 767px) {
+            margin-top: 18px;
+            margin-bottom: 0px;
+            }
+        }
+        .c-field:nth-last-child(1){
+            @media screen and (max-width: 767px) {
+            margin-bottom: 0px !important;
+            }
+        }
+        hr{
+            color: #E0E0E0;
+            opacity: 0.4;
+            margin:25px -18px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 20px !important;
+    }
+    .profile-dropdown {
+        margin-bottom: 10px;
+        width: auto;
+        max-width: 180px;
+        margin-left: auto;
+        .dropdown-btn {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 16px;
+            cursor: pointer;
+            margin-left: auto;
+            background-color: #e6eced;
+            position: relative;
+            z-index: 3;
+        }
+        .dropdown-menu {
+            min-width: 185px;
+            padding: 5px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+            border: 0;
+            background-color: #fff;
+            @media screen and (max-width:767px) {
+                min-width: 150px;
+            }
+            .dropdown-item {
+                font-size: 13px;
+                color: #111b45;
+                font-weight: 400;
+                line-height: 13px;
+                padding: 0px;
+                background-color: #fff;
+                position: relative;
+                border-bottom: 1px solid #f2f3ef;
+                padding: 14px 0;
+                outline: 0;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .profile-image-col {
+        padding-right: 30px;
+        text-align: center;
+        @media screen and (max-width: 991px) {
+            padding-right: 0px;
+            text-align: left;
+            margin-bottom: 30px;
+            margin-top: -40px;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 100%;
+            margin: 0 auto;
+            @media screen and (max-width: 991px) {
+                margin: 0;
+            }
+            @media screen and (max-width: 767px) {
+                width: 84px;
+                height: 84px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+        }
+        .profile-name {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 18px;
+            color: #587e85;
+            word-break: break-word;
+        }
+    }
+    .profile-form-col {
+        border-left: solid 1px rgba(151, 151, 151, 0.4);
+        padding-left: 60px;
+        padding-right: 40px;
+        @media screen and (max-width: 991px) {
+            padding: 0;
+            border: 0;
+        }
+        .add-btn {
+            display: flex;
+            margin-bottom: 30px;
+            img {
+                width: 15px;
+                margin-right: 5px;
+            }
+        }
+        .card-box {
+            position: relative;
+            span {
+                position: absolute;
+                right: 0;
+                top: 25px;
+                @media screen and (max-width: 767px) {
+                   top:50px;
+                   left:0;
+                }
+            }
+            input {
+                padding-right: 110px;
+                @media screen and (max-width: 767px) {
+                    padding-bottom: 60px;
+                 }
+
+            }
+            &.bank-card{
+                @media screen and (max-width: 767px) {
+                input{
+                    border-bottom: 0;
+                    padding-bottom: 10px;
+                }
+            }
+            }
+        }
+    }
+}
+.c-field {
+    margin-bottom: 25px;
+    .field-name {
+        color: #102c42;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

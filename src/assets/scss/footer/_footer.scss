@@ -1,0 +1,41 @@
+footer {
+    background-color: #587e85;
+    padding: 20px 0;
+    color: #fff;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    ul {
+        li {
+            display: inline-block;
+            margin-right: 15px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            a {
+                color: #fff;
+                @include fontsize(13);
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        text-align: right;
+        @include fontsize(13);
+        @media (max-width: 767px) {
+            text-align: center;
+            margin-top:10px;
+        }
+    }
+}

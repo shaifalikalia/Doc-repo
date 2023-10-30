@@ -1,0 +1,18 @@
+.form-wrapper
+{
+    @include margin-top(20);
+    @include padding(70);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+    background-color: $white;
+
+    @media (max-width: 991px) {
+        @include padding(40); 
+    }
+
+    @media (max-width: 767px) {
+        @include margin-top(30);
+        @include padding(20 20 40);
+    }
+
+}

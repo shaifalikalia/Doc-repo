@@ -1,0 +1,63 @@
+.manage-content-block
+{
+    @include padding(50 0);
+
+    @media (max-width: 767px) {
+        @include padding(20 0);
+    }
+    
+    .title {
+        color: $heading-color;
+        font-weight: 500;
+        @include fontsize(25);
+        line-height: 25px;
+        margin: 16px 0 0 0;
+
+        @media (max-width: 767px) {
+            @include fontsize(20);
+        }
+    }
+
+    .form-wrapper
+    {
+        margin-top: 30px;
+    }
+
+    .content-field-group
+    {
+        .btn-field
+        {
+            margin-top: 40px;
+        }
+
+        .content-editor
+        {
+            margin-top:30px;
+
+            ul 
+            {
+                list-style: disc;
+                padding-left: 25px;
+                &.ck-list{
+                    list-style: none;
+                    padding-left: 0;
+                }
+            }
+            ol 
+            {
+                list-style:decimal;
+                padding-left: 25px;
+            }
+            
+            label
+            {
+                color: #79869a;
+                padding-bottom: 0;
+                margin: 0;
+                @include fontsize(13);
+                font-weight: 400;
+            }
+        
+        }
+    }
+}

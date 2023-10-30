@@ -1,0 +1,81 @@
+.doctor-office-page{
+    padding-top: 30px;
+    min-height: calc(100vh - 80px);
+    @media screen and (max-width:767px){
+        margin-top: 52px;
+        min-height: calc(100vh - 52px);
+        padding-top: 15px;
+    }
+    .officeCardWrapper{
+        margin-bottom: 28px;
+        @media screen and (max-width:767px){
+            margin-bottom: 15px;
+        }
+    }
+    .anchor-link{
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 500;
+        color: #587e85;
+        cursor: pointer;
+    }
+  .office-card-container{
+      padding: 14px 14px 0;     
+      .pinIcon{
+          margin-right: 8px;
+          width: 12px;
+          line-height: 1.1;
+      }
+      .addressField{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .book-btn{
+          display: flex;
+          margin: 0 -30px;
+          padding: 16px 16px 0;
+          border-top: solid 1px #dadce0;
+          margin-top: 30px;
+          justify-content: center;
+          cursor: pointer;
+          img{
+              margin-right: 5px;
+          }
+          p{text-decoration: underline;}
+      }
+  }
+}
+.doctor-specialty-modal{
+    max-width: 660px;
+    .modal-title{
+        font-size: 25px;
+        color: #111b45;
+        font-weight: 500;
+        margin-bottom: 20px;
+        @media screen and (max-width:767px){
+            margin-top: 10px;
+            margin-right: 2rem;
+            font-size: 20px;
+        }
+       
+    }
+    .specialty-list{
+        max-height: 500px;
+        overflow-y: auto;
+        li{
+            padding: 14px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color:     #102c42;
+            border-bottom: 1px solid 
+            #dadce0;
+            &:last-child{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.basic-plan.plan-detail .plan-detail-box ul li{
+    &:nth-last-child(1){
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+}
+.basic-subscription{
+    .page-title{
+        margin-top: 9px !important;
+        margin-bottom: 30px !important;
+    }
+    .form-wrapper{
+        padding: 10px 30px 30px 30px;
+    }
+}

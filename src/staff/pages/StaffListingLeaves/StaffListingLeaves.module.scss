@@ -1,0 +1,173 @@
+.leaves-task-card {
+  padding: 30px !important;
+
+  @media screen and (max-width: 767px) {
+    padding: 28px 20px 20px 20px !important;
+  }
+
+  .inner-content {
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .approval-status {
+      border-radius: 6px !important;
+      max-height: 26px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: #ffffff;
+
+      @media screen and (max-width: 767px) {
+        order: 1;
+        margin-bottom: 20px;
+      }
+
+      span {
+        padding: 4px 6px;
+        border-radius: 6px;
+      }
+
+      .pending {
+        background-color: #66accf;
+      }
+
+      .approved {
+        background-color: #a9cf3d;
+      }
+
+      .rejected {
+        background-color: #ee4f4f;
+      }
+    }
+
+    .name {
+      @media screen and (max-width: 767px) {
+        order: 2;
+      }
+
+      p {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .checkbox-color {
+
+      label {
+        color: #587e85;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 767px) {
+          margin-bottom: 25px;
+        }
+      }
+
+      span {
+        color: #587e85 !important;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+
+        &::after {
+          top: 1px !important;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        order: 2;
+      }
+    }
+ 
+  }
+
+  .btn-top {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 15px;
+    min-height: 40px;
+  }
+
+  .reject-btn {
+    padding: 10px 30px;
+    font-size: 15px;
+    min-height: 40px;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0px;
+      min-height: 30px;
+    }
+
+    &:focus, &:hover, &:active {
+      background-color: transparent;
+      color: #587e85;
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.staff-listing-leaves {
+  .sub-head {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.28px;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+
+  .left-main {
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .left-container {
+      @media screen and (max-width: 767px) {
+        order: 2;
+        width: 100%;
+      }
+
+      .left-inner {
+        width: 71%;
+      }
+    }
+
+    .search {
+      @media screen and (max-width: 767px) {
+        order: 1;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .action-container {
+
+    margin-top: 30px;
+    margin-bottom: 22px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 12px;
+    }
+
+    .timesheet-leave-length{
+      color: #274642;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .ch-checkbox {
+      font-weight: 600;
+      font-size: 16px;
+      color: #2d3245;
+    }
+  }
+}

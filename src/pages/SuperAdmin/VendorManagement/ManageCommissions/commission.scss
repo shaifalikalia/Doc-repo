@@ -1,0 +1,85 @@
+.add-category {
+
+    a {
+
+        line-height: 1.4;
+
+    }
+}
+
+.commissions-table {
+    .data-table-block {
+        .data-table-container {
+            .table {
+                tbody {
+                    tr {
+                        td {
+
+
+                            &:first-child {
+                                width: 30%;
+
+                            }
+
+                            &:nth-child(2) {
+
+                                width: 35%;
+
+                            }
+
+                            &:nth-child(3) {
+
+                                width: 26.5%;
+
+                            }
+
+                            &:nth-child(4) {
+
+                                width: 9.5%;
+
+                            }
+
+                            span {
+                                font-size: 12px;
+
+
+
+                            }
+
+
+                        }
+
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .pagnation-block {
+            margin-top: 80px;
+
+        }
+
+    }
+}
+
+.category-modal {
+    .modal-content {
+
+
+
+
+        .modal-body {
+            .last-field {
+                padding-top: 10px;
+
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.new-broadcast-messages{
+    .broadcast-card{
+        padding: 70px;
+        .input-wrapper{
+            max-width: 420px;
+            textarea{
+                height: 85px;
+                resize: none;
+            }
+        }
+    }
+}
+.select-user-modal{
+    max-width: 660px;
+    .search-input-card{
+        position: relative;
+        display: flex;
+        border-radius: 5px;
+        border: solid 1px #dadada;
+        padding: 11px 15px;
+        height: 50px;
+    margin: 30px 0;
+        img{
+            width: 16px;
+            margin-right: 10px;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            width: 100%;
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #979d9f;
+                opacity: 0.5; /* Firefox */
+                font-weight: 400;
+              }
+              
+              &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: #979d9f;
+                font-weight: 400;
+                opacity: 0.5;
+              }
+              
+              &::-ms-input-placeholder { /* Microsoft Edge */
+                color: #979d9f;
+                font-weight: 400;
+                opacity: 0.5;
+              }
+        }
+    }
+    .all-offices{
+        font-size: 14px;
+        font-weight: 500;
+        color: #77928b;
+        margin-bottom: 7px;
+        img{
+            width: 6px;
+            margin-left: 10px;
+        }
+    }
+    .office-list{
+        margin-bottom: 40px;
+        li{
+            border-bottom: solid 1px #dadce0;
+            padding: 15px 0 7px;
+           color: #102c42;
+        }
+    }
+}

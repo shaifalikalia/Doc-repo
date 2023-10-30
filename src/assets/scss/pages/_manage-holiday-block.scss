@@ -1,0 +1,519 @@
+.manage-holiday-block {
+    @include padding(40 0);
+    @media (max-width: 767px) {
+        @include padding(23 0);
+    }
+
+    .add-button
+    {
+        @media (max-width: 767px) {
+
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+    }
+
+    h2 {
+        @include fontsize(25);
+        margin: 0;
+        font-weight: 600;
+        color: $heading-color;
+
+        @media (max-width: 767px) {
+            @include fontsize(20);
+        }
+    }
+
+    .holiday-data-block {
+        @include margin-top(30);
+        border-radius: 10px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+        background-color: $white;
+
+        @media (max-width: 767px) {
+            @include margin-top(20);
+        }
+
+        .tab_header {
+            @include padding(24 20 20);
+            border-bottom: 1px solid #f2f3ef;
+            text-align: center;
+            @media (max-width: 767px) {
+                @include padding(20);
+            }
+
+            ul {
+                display: inline-block;
+
+                li {
+                    display: inline-block;
+                    @include padding(0 30);
+
+                    span {
+                        text-transform: uppercase;
+                        @include fontsize(12);
+                        line-height: 12px;
+                        color: #87928d;
+                        font-weight: 600;
+                        cursor: pointer;
+                        letter-spacing: 1.2px;
+                        position: relative;
+                        min-width: 66px;
+
+                        &:hover {
+                            color: #587e85;
+                        }
+
+                        &.active {
+                            color: #587e85;
+
+                            &::after {
+                                @include pos(ab, null 15px -24px 15px);
+                                content: "";
+                                height: 3px;
+                                background-color: #587e85;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .holiday-list-block {
+            @include padding(70);
+            @media (max-width: 991px) {
+                @include padding(40);
+            }
+
+            @media (max-width: 767px) {
+                @include margin-top(0);
+                @include padding(20 20 40);
+            }
+
+            h4 {
+                @include fontsize(25);
+                margin: 0 0 20px;
+                font-weight: 500;
+                color: $heading-color;
+                @media (max-width: 767px) {
+                    @include fontsize(16);
+                    font-weight: 600;
+                }
+            }
+
+            .data-list-container {
+                padding-left: 70px;
+
+                @media (max-width: 1199px) {
+                    padding-left: 20px;
+                }
+
+                @media (max-width: 991px) {
+                    padding: 0;
+                    margin-top: 30px;
+                }
+            }
+
+            .data-list {
+                padding-right: 20px;
+
+                table {
+                    width: 100%;
+                    min-height:150px;
+
+                    tbody {
+                        td {
+                            border-bottom: 1px solid #dadce0;
+                            @include padding(15 0);
+                            @include fontsize(15);
+
+                            @media (max-width:767px) {
+                                @include fontsize(13);
+                            }
+
+                            .action-links {
+                                float: right;
+
+                                @media (max-width:767px) {
+                                    display: none;
+                                }
+
+                                ul {
+                                    li {
+                                        display: inline-block;
+                                        @include padding(0 12);
+                                        &:last-child {
+                                            padding-right: 0;
+                                        }
+
+                                        &:first-child {
+                                            padding-left: 0;
+                                        }
+
+                                        span {
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .action-dropdown {
+                              display: none;
+
+                              @media (max-width:767px) {
+                                display: block;
+                            }
+                    
+                                span.ico {
+                                    cursor: pointer;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    line-height: 32px;
+                                    background-color: transparent;
+                                    display: inline-block;
+                    
+                                    &:hover {
+                                        background-color: #e6eced;
+                                    }
+                                }
+                    
+                                .dropdown-menu {
+                                    min-width: 120px;
+                                    border-radius: 10px;
+                                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+                                    background-color: $white;
+                                    border: 0;
+                                    padding: 0 15px;
+                    
+                                    .dropdown-item {
+                                        padding: 10px 0;
+                                        background-color: transparent;
+                                        color: #111b45;
+                                        @include fontsize(13);
+                                        border-bottom: 1px solid #f2f3ef;
+
+                                        
+                                    img {
+                                        display: inline-block;
+                                        margin-right: 8px;
+                                        position: relative;
+                                        top: -2px;
+                                        width: 15px;
+                                    }
+                    
+                                        &:last-child {
+                                            border: 0;
+                                        }
+                    
+                                        &:hover,
+                                        &:focus {
+                                            outline: none;
+                                            background-color: transparent;
+                                            box-shadow: none;
+                                            color: $theme;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.empty-holiday-list {
+    text-align: center;
+    margin: 50px 0 0;
+
+    h5 {
+        @include fontsize(18);
+        color: $heading-color;
+        margin: 0 0 10px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+
+    p {
+        @include fontsize(16);
+        margin: 0;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+
+.holiday-calendar {
+    border-right: 1px solid #e0e0e0;
+    height: 100%;
+
+    @media (max-width: 991px) {
+        border-right: 0;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 20px;
+    }
+  
+    .react-calendar__month-view__weekdays {
+        font-weight: 500;
+        font-size: 13px;
+        color: #2f3245;
+    }
+    .react-calendar__month-view__weekdays__weekday {
+        abbr {
+            text-decoration: none;
+        }
+    }
+   
+    .react-calendar__navigation{
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+
+        button{
+            background-color: transparent;
+            font-size: 14px;
+            color: #587e85;
+            font-weight: 600;
+    
+            &:hover, &:focus{
+                background-color: transparent;
+            }
+
+        }
+        .react-calendar__navigation__arrow{
+            font-size: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.react-calendar__navigation__prev2-button{
+                background-image: url(./../../images/calendar-arrow-left-double.svg);
+               
+            }
+            &.react-calendar__navigation__next2-button{
+                background-image: url(./../../images/calendar-arrow-right-double.svg);
+            }
+            &.react-calendar__navigation__prev-button{
+                background-image: url(./../../images/calendar-arrow-left.svg);
+            }
+            &.react-calendar__navigation__next-button{
+                background-image: url(./../../images/calendar-arrow-right.svg);
+            }
+        }
+    }
+    .react-calendar__month-view__days{
+        button{
+            background-color: transparent;
+            font-size: 14px;
+            
+            &:hover, &:focus{
+                background-color: transparent;
+            }
+        }
+    
+    }
+    .react-calendar__month-view__days__day   {
+        abbr {
+        border: 1px solid #e5e7df;
+        border-radius: 4px;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        line-height: 25px;
+        display: block;
+        color: #274642;
+        margin: 0 auto;
+        }
+    }
+
+    
+
+    .year-data-list {
+        span {
+            display: block;
+            min-width: 150px;
+            max-width: 150px;
+            border: 1px solid #e5e7df;
+            border-radius: 6px;
+            padding: 10px 0;
+            text-align: center;
+            margin: 0 auto 10px;
+            @include fontsize(14);
+            color: #274642;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #587e85;
+                border-color: #587e85;
+                color: $white;
+            }
+            &.active {
+                background-color: #587e85;
+                border-color: #587e85;
+                color: $white;
+            }
+        }
+    }
+
+    .react-calendar {
+        width: 330px;
+
+        @media (max-width: 991px) {
+            margin: 0 auto;
+        }
+    }
+
+    
+
+    .react-calendar__month-view__days__day {
+        @include fontsize(14);
+        color: #274642;
+        padding: 5px 10px !important;
+        // border: 1px solid #e5e7df;
+        // border-radius: 4px;
+
+        abbr {
+            border: 1px solid #e5e7df;
+            border-radius: 4px;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            line-height: 25px;
+            display: block;
+        }
+    }
+   
+    .react-calendar__tile--now {
+        background-color: transparent !important;
+        abbr {
+            background-color: #587e85 !important;
+            color: #fff !important;
+        }
+    }
+    .react-calendar__tile--active {
+        background: none !important;
+    }
+
+    .react-calendar__tile--active:enabled:hover,
+    .react-calendar__tile--active:enabled:focus {
+        background: #e6e6e6;
+    }
+
+    .react-calendar__tile:enabled:hover,
+    .react-calendar__tile:enabled:focus {
+        background-color: transparent;
+
+        abbr {
+            background-color: #587e85 !important;
+            color: #fff !important;
+        }
+    }
+}
+.react-calendar__month-view__days .react-calendar__tile{
+    @media (max-width:767px) {
+      padding:  6px 4.5px;
+    }
+}
+.react-calendar {
+    border: 0 !important;
+}
+
+.react-calendar__month-view .highlight-date {
+    abbr {
+        border: 1px solid #a9cf3d !important;
+    }
+}
+
+.holiday-calendar .react-calendar__tile.highlight-date:enabled:hover abbr,
+.holiday-calendar .react-calendar__tile.highlight-date:enabled:focus abbr {
+    background-color: #a9cf3d !important;
+    color: #fff !important;
+}
+
+.add-holiday-modal {
+    .title {
+        @include fontsize(25);
+        margin: 0;
+        font-weight: 500;
+        color: $heading-color;
+
+        @media (max-width: 767px) {
+            @include fontsize(20);
+        }
+    }
+
+    .add-holiday-block {
+        margin-top: 40px;
+
+        .date-input-picker {
+            position: relative;
+
+            .c-form-control {
+                padding-right: 30px;
+            }
+
+            span.ico {
+                @include pos(ab, 0 0 null null);
+            }
+        }
+
+        .react-datepicker-wrapper {
+            display: block;
+        }
+
+        .btn-field {
+            @media (max-width: 767px) {
+                @media (max-width: 767px) {
+                    .button {
+                        width: 100%;
+                        display: block;
+                        margin-bottom: 0;
+                    }
+
+                    .button-border {
+                        border: 0;
+                        @include fontsize(12);
+                        font-weight: 500;
+                        text-decoration: underline;
+                        color: #577d84;
+
+                        &:hover,
+                        &:focus {
+                            background: transparent;
+                            border: 0;
+                            color: #577d84;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .react-datepicker, .react-datepicker__header,
+    .react-datepicker__header__dropdown select{
+        border-color: #ddd;
+    }.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+        color: #2f3245;
+        font-size: 13px;
+    }
+    .react-datepicker__day-name{
+        text-transform: uppercase;
+    }
+    .react-datepicker__header{
+        background-color: #f2f2f2;
+    }
+    .react-datepicker__day {
+        border: 1px solid #e5e7df;
+    color: #274642;}
+    .react-datepicker__day--selected{
+        background-color: #587e85;
+        color: #fff;
+        border-color:#587e85 ;
+    }
+    
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+    display: none;
+}

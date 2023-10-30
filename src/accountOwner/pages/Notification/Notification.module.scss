@@ -1,0 +1,46 @@
+.notification-card {
+    padding: 55px 70px 70px !important;
+    margin-bottom: 40px !important;
+    @media screen and (max-width:767px){
+        padding: 5px 20px 20px !important;
+        margin-bottom: 30px !important;
+    }
+    .notification-list {
+
+        li {
+            display: flex;
+            padding: 20px 0;
+            border-bottom:1px solid #E0E0E0;
+            align-items: flex-start;
+            .notify-icon {
+                margin-right: 20px;
+                position: relative;
+                top: 4px;
+                border: 1px solid #E5E7DF;
+                width: 26px;
+                height: 26px;
+                text-align: center;
+                border-radius: 100%;
+                line-height: 24px;
+            }
+            .content-box {
+                width: calc(100% - 50px);
+                .notify-text {
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: #535B5F;
+                    strong{
+                        font-weight: 600;
+                    }
+                }
+                .notify-date {
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #6F7788;
+                    margin-top: 8px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

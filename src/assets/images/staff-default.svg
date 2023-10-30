@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="79px" viewBox="0 0 79 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>B546A89E-7159-4E8F-B737-4D33CB9D1E9A</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="79" height="79" rx="39.5"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="200617_staff_listing" transform="translate(-907.000000, -603.000000)">
+            <g id="Group-10-Copy-5" transform="translate(814.000000, 563.000000)">
+                <g id="Bitmap" transform="translate(93.000000, 40.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#CAD3C0" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <path d="M39,16 C31.8202444,16 26,21.8203167 26,29 C26,36.1796833 31.8202444,42 39,42 C46.1797556,42 52,36.1796833 52,29 C52,21.8203167 46.1797556,16 39,16 Z M39.5,49 C24.2649997,49 12,61.1057143 12,76.1428571 L12,79 L67,79 L67,76.1428571 C67,61.1057143 54.7349989,49 39.5,49 Z" id="Shape" fill="#E0EAD5" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

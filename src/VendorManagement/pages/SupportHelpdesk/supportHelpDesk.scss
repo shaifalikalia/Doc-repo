@@ -1,0 +1,33 @@
+.data-table-block {
+    &.support-table-block {
+        .pagnation-block {
+            margin-top: 80px;
+
+        }
+    }
+}
+
+
+.c-field-label {
+    label {
+        font-size: 12px;
+        color: #6F7788;
+    }
+}
+
+
+.select-radio{
+    .select-control{
+        @media screen and (max-width:767px) {
+        margin-top: -27px;
+        }
+    }
+}
+.support-helpdesk-page{ .page-title{
+    margin-top: 2px !important;
+    margin-bottom: 30px !important;
+}
+.custom-above{
+    margin-top: -15px;
+}
+}

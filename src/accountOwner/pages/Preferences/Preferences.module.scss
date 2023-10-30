@@ -1,0 +1,230 @@
+.page-subheading {
+    margin-top: -15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+}
+
+.title {
+    color: #535b5f !important;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 30px;
+    line-height: 1.5 !important;
+
+    strong {
+        color: #2f3245;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 12px;
+    }
+}
+
+.loader-position {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2px;
+    margin: 8px;
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 70px 70px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: 20px 20px 30px 20px;
+    }
+
+    .staticIp-table {
+        thead {
+            th {
+                border: 0;
+                color: #102c42;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 15px 10px;
+                width: 25%;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+            @media (max-width: 990px) {
+                display: none;
+            }
+        }
+        td {
+            border-color: #dadce0;
+            color: #535b5f;
+            font-size: 14px;
+            padding: 17px 10px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        tr {
+            @media (max-width: 990px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.warning-alert {
+    font-size: 12px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.accordion {
+    padding: 20px;
+    
+    background-color: #f9fcee;
+    border-radius: 6px;
+}
+
+.accordion-arrow {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.accordion-checkbox {
+    label {
+        margin-bottom: 0;
+    }
+
+    span {
+        color: var(--color-secondary) !important;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    span:before {
+        top: 3px;
+    }
+
+    span::after {
+        top: 7px !important;
+    }
+}
+
+.fade {
+    opacity: 0.4;
+}
+
+.geofence-define-button-container {
+    margin-top: 20px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.static-ip-table-container {
+    height: 250px;
+    overflow-y: auto;
+}
+
+.static-ip-add-button-container {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.modal-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .action-btn {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        flex-direction: column;
+
+        .action-btn {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+
+        .cancel-btn, .cancel-btn:hover:enabled {
+            all: unset;
+            color: var(--color-secondary);
+            border: none;
+            height: auto;
+            text-decoration: underline;
+        }
+
+        .cancel-btn:disabled {
+            all: unset;
+            color: var(--color-gray-dark-2);
+        }
+    }
+}
+
+.static-ip-table-action-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-right: 10px;
+
+    button {
+        padding: 0;
+        background: none;
+        outline: none;
+        border: none;
+        color: var(--color-secondary);
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .delete-btn {
+        color: #e76f2a;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 991px) {
+        max-width: 200px;
+    }
+}

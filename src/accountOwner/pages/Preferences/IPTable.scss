@@ -1,0 +1,88 @@
+.static-ip-table{
+    .data-table-block
+    { 
+        .data-table-container{
+            box-shadow: none;
+            background-color: transparent;
+            .table {
+                thead{
+                    th{
+                        padding: 15px 10px;
+                        background-color: transparent;
+                        width: 25%;
+                        &:first-child{
+                            padding-left: 0;
+                        }
+                    }          
+                }
+                tbody{
+                    tr{
+                        border-bottom: 1px solid #dadce0;
+
+                        @media screen and (max-width:991px) {
+                            box-shadow: none;
+                            background-color: transparent;
+                            margin-bottom: 20px;
+                            border-radius: 0;
+                            &:last-child{
+                                margin-bottom: 0;
+                                border: 0;
+                            }
+                        }
+                    }
+
+                    tr:last-child {
+                        border-bottom: none;
+                    }
+
+                    td{
+                        padding: 17px 10px;
+                        @media screen and (max-width:991px) {
+                            padding: 0;
+                            padding-top: 20px;
+                            padding-left: 0 !important;
+                            padding-bottom: 16px;
+                          &:before{
+                                top: 0;
+                                transform: none;
+                                left: 0;
+                                width: 100%;
+                            
+                          }
+                          &:last-child{
+                              padding-left: 0 !important;
+                          }
+                        }
+                        &:first-child{
+                            padding-left: 0;
+                            color: #535b5f
+                        }
+                        &:after{
+                           display: none;
+                        }
+                    }
+                }
+                .btn-box{
+                    display: flex;
+                    a{
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-decoration: underline;
+                        margin-right:30px;
+                        color: #587e85;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &.delete-btn{
+                            color: #e76f2a;
+                        }
+                        &.status-btn{
+                            min-width: 65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+}

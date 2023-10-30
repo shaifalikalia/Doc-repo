@@ -1,0 +1,50 @@
+.table-action-btn {
+    font-size: 12px;
+    text-decoration: underline !important;
+    cursor: pointer;
+    font-weight: 500;
+    color: #587e85;
+}
+
+.orange {
+    color: #e76f2a;
+}
+
+.table-non-action-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #587e85;
+}
+
+.tab-link-container {
+    margin-right: 60px;
+}
+
+.tab-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #87928d;
+    letter-spacing: 1.2px;
+    text-decoration: none !important;
+
+    &:hover {
+        color: #587e85 !important;
+    }
+}
+
+.tab-link-active {
+    color: #587e85;
+}
+
+.tab-link-active-border {
+    width: 28px;
+    height: 2px;
+
+    border-radius: 2px;
+    background-color: #587e85;
+}
+
+.tab-content {
+    margin-top: 30px;
+}

@@ -1,0 +1,54 @@
+.edit-profile {
+
+    .account-setup-block {
+        .form-wrapper {
+            padding-top: 10px;
+            @media screen and (max-width: 767px) {
+                padding-bottom: 16px;
+            }
+
+            .account-setup-form {
+
+                .file-upload-container {
+                    max-width: 250px;
+
+                    @media screen and (max-width: 991px) {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .file-upload-field {
+                        @media screen and (max-width: 991px) {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+
+                    }
+                }
+
+                .upload-help-text {
+                    @media screen and (max-width: 991px) {
+                        text-align: center;
+                    }
+                }
+
+            }
+
+        }
+    }
+   
+    .edit-profile-tabs{
+        .nav-tabs{
+           
+            .nav-item{
+                
+                .nav-link
+                {color: #dbdbdb;
+                    &.active{
+                    color: #111b45;
+                }
+            }
+            }
+            }}   
+}

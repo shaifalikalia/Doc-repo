@@ -1,0 +1,77 @@
+.staff-listing-leaves{
+    .heading{
+        margin-top: -16px;
+        @media screen and (max-width:767px) {
+            margin-top: -8px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 18px;
+        }
+
+    }
+    .search-box span.ico {
+        position: absolute;
+        top: 13px;
+        @media screen and (max-width:767px) {
+            top: 8px;
+        }
+
+    }
+    .member-filter { &.all-option .react-select-container {
+
+      margin-right: 20px;
+      width: 127px;
+      @media screen and (max-width:767px) {
+        width: 96%;
+      }
+    }
+    &.year-option .react-select-container {
+
+        width: 90px;
+        @media screen and (max-width:767px) {
+            width: 100%;
+            margin-left: auto;
+
+          }
+
+    }
+
+
+}.data-table-block .pagnation-block{
+    margin-top: 70px;
+    padding-bottom: 50px;
+    @media screen and (max-width:767px) {
+    margin-top: 30px;
+    padding-bottom: 24px;
+    }
+
+}
+
+.year-option .react-select__menu>div{
+    max-height: 250px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #587e85;
+        border-radius: 10px;
+    }
+}
+.all-option{
+    .react-select__menu{
+        width: 100px;
+
+
+    }
+}
+
+}

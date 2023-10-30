@@ -1,0 +1,17 @@
+.confirem-accept-modal-dialog{
+  button{
+      min-width: 220px;
+      margin-bottom: 10px;
+      @media screen and (max-width:767px){
+          min-width: auto;
+      }
+     
+  }
+  .desc-text{
+      max-width: 450px;
+      margin: 0 auto 40px;
+      @media screen and (max-width:767px){
+          margin: 0 auto 20px;
+      }
+  }
+}

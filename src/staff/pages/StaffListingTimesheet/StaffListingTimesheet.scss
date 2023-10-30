@@ -1,0 +1,106 @@
+.staff-listing-timesheet {
+  .member-filter {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .date-page-title {
+    margin-top: -15px !important;
+    @media screen and (max-width: 767px) {
+      margin-top: -12px !important;
+    }
+  }
+  .heading {
+    margin-top: -16px;
+  }
+  .container {
+    max-width: 1170px;
+  }
+  .search-box span.ico {
+    top: 13.7px;
+  }
+  .c-field .inputdate .react-datepicker__input-container input {
+    width: 160px;
+  }
+  .timesheet-table {
+    .data-table-block {
+      .data-table-container .table tbody tr td {
+        .ch-checkbox span {
+          color: #587e85;
+          font-weight: 500;
+          text-decoration: underline;
+          @media screen and (max-width: 991px) {
+            font-weight: 600;
+          }
+        
+        }
+        &:nth-child(1) {
+          @media screen and (max-width: 991px) {
+            font-weight: 600;
+          }
+        }
+        &:nth-child(9) {
+          @media screen and (max-width: 991px) {
+            font-weight: 600;
+          }
+        }
+        .custom-staff-name span {
+          color: #587e85;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        &:nth-last-child(2) {
+          width: 11%;
+          @media screen and (max-width: 991px) {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          @media screen and (max-width: 991px) {
+            padding-left: 50% !important;
+            padding-right: 20px !important;
+          }
+          .approve {
+            word-break: break-all;
+            @media screen and (max-width: 991px) {
+              width: 100%;
+              display: inline-block;
+            }
+          }
+          .reject {
+            margin-left: 0px;
+            @media screen and (max-width: 1024px) {
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+    }
+    .pagnation-block {
+      margin-top: 80px;
+      @media screen and (max-width: 767px) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.rejection-modal {
+  .modal-content {
+    padding: 50px 30px 30px;
+    @media screen and (max-width: 767px) {
+      padding: 20px 15px 16px;
+    }
+  }
+}
+.info-modal {
+  button {
+    min-width: 222px;
+    margin-top: 40px;
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+}

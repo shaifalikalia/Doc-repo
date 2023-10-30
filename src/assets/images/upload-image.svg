@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="49.783px" height="49.783px" viewBox="21 15 49.783 49.783" enable-background="new 21 15 49.783 49.783"
+	 xml:space="preserve">
+<filter  x="-82.4%" y="-70.3%" width="284.8%" height="284.8%" id="prefix__a" filterUnits="objectBoundingBox">
+	<feOffset  result="shadowOffsetOuter1" in="SourceAlpha" dy="11" dx="5"></feOffset>
+	<feGaussianBlur  result="shadowBlurOuter1" in="shadowOffsetOuter1" stdDeviation="13.5"></feGaussianBlur>
+	
+		<feColorMatrix  values="0 0 0 0 0.0943920444 0 0 0 0 0.328945933 0 0 0 0 0.334776947 0 0 0 0.248825393 0" in="shadowBlurOuter1">
+		</feColorMatrix>
+</filter>
+<g>
+	<g transform="translate(21 15)">
+		<g display="none" filter="url(#prefix__a)">
+			<path display="inline" d="M24.891,0L24.891,0c13.748,0,24.892,11.144,24.892,24.891v0.001c0,13.747-11.145,24.891-24.891,24.891
+				h-0.001C11.144,49.783,0,38.639,0,24.892v-0.001C0,11.144,11.144,0,24.891,0z"/>
+		</g>
+		<g>
+			<path id="prefix__b_1_" fill="#A9CF3D" d="M24.891,0L24.891,0c13.748,0,24.892,11.144,24.892,24.891v0.001
+				c0,13.747-11.145,24.891-24.891,24.891h-0.001C11.144,49.783,0,38.639,0,24.892v-0.001C0,11.144,11.144,0,24.891,0z"/>
+		</g>
+	</g>
+	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.091" d="M56.768,44.076c0.444,0,0.739,0.297,0.739,0.743l0,0v2.973
+		c0,2.08-1.629,3.716-3.702,3.716l0,0H38.99c-2.074,0-3.703-1.635-3.703-3.716l0,0v-2.973c0-0.446,0.296-0.743,0.74-0.743
+		c0.445,0,0.741,0.297,0.741,0.743l0,0v2.973c0,1.189,1.037,2.23,2.222,2.23h14.814c1.186,0,2.223-1.041,2.223-2.23l0,0v-2.973
+		C56.027,44.373,56.324,44.076,56.768,44.076L56.768,44.076z M45.952,29.509c0.297-0.298,0.741-0.298,1.037,0l0,0l4.445,4.46
+		c0.296,0.296,0.296,0.742,0,1.04c-0.148,0.148-0.444,0.148-0.593,0.148c-0.148,0-0.444,0-0.592-0.149l0,0l-3.111-3.121v10.702
+		c0,0.446-0.297,0.744-0.741,0.744c-0.445,0-0.74-0.298-0.74-0.744l0,0V31.887l-3.112,3.121c-0.296,0.298-0.74,0.298-1.037,0
+		c-0.296-0.297-0.296-0.743,0-1.04l0,0L45.952,29.509z"/>
+</g>
+</svg>
